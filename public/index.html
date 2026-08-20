@@ -2,57 +2,55 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0f766e">
-<title>AshaCare — Frontline Health Companion</title>
+<title>AshaCare - Frontline Health Companion</title>
 <style>
 :root{--teal:#0f766e;--teal2:#115e59;--bg:#f8fafc;--line:#e2e8f0;--text:#0f172a;--muted:#64748b}
-*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-button,input,textarea,select{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:flex;justify-content:center}.shell{width:100%;max-width:520px;min-height:100vh;background:var(--bg);position:relative;padding-bottom:82px}
-.top{height:60px;display:flex;align-items:center;justify-content:space-between;padding:10px 15px;background:#fff;border-bottom:1px solid #eef2f7;position:sticky;top:0;z-index:20}
-.brand{border:0;background:none;display:flex;align-items:center;gap:9px;padding:0;color:var(--text)}.logo{width:34px;height:34px;border-radius:10px;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:18px}.brand strong{font-size:15px}
-.topRight{display:flex;align-items:center;gap:7px}.pill{border:0;border-radius:999px;padding:6px 9px;font-size:11px;font-weight:700;background:#f1f5f9;color:#475569}.pill.online{background:#ecfdf5;color:#047857}.pill.offline{background:#fffbeb;color:#b45309}.pill.auth{background:#e0f2fe;color:#0369a1}
-main{padding:16px}.hero{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff;border-radius:18px;padding:20px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-60px;bottom:-70px;background:rgba(255,255,255,.08)}.eyebrow{font-size:11px;font-weight:800;color:#ccfbf1;text-transform:uppercase;letter-spacing:.06em}.hero h2{font-size:21px;line-height:1.2;margin:8px 0 0}.hero p{font-size:12px;color:#ccfbf1;margin:7px 0 0}.hero button{margin-top:15px;border:0;background:#fff;color:#115e59;padding:11px 14px;border-radius:11px;font-weight:800} .grid2{display:grid;grid-template-columns:1fr 1fr;gap:11px}.stats{margin:12px 0}.card{background:#fff;border:1px solid #eef2f7;border-radius:14px}.stat{padding:14px}.stat strong{font-size:27px;display:block}.stat span,.muted{font-size:11px;color:var(--muted)}
-.sync{padding:13px;display:flex;align-items:center;justify-content:space-between}.linkBtn{border:0;background:none;color:var(--teal);font-size:12px;font-weight:800;padding:5px}
-.sectionTitle{font-size:11px;font-weight:850;color:#64748b;text-transform:uppercase;letter-spacing:.08em;margin:18px 0 8px}.record{padding:12px;display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;border:0;background:#fff;width:100%;text-align:left}.record:active{background:#f8fafc}.recordName{font-size:14px;font-weight:700}.risk{display:inline-flex;align-items:center;gap:5px;padding:5px 9px;border-radius:999px;font-size:10px;font-weight:850;white-space:nowrap}.risk.red{color:#b3261e;background:#fdecea}.risk.yellow{color:#8a5a00;background:#fff6dc}.risk.green{color:#1e6b45;background:#e9f7ef}.dot{width:6px;height:6px;border-radius:50%;background:currentColor}
-.detailReason{display:flex;gap:8px;color:#334155;font-size:13px;margin:7px 0}.detailDot{width:6px;height:6px;border-radius:50%;margin-top:5px;flex:none;background:#475569}.transcriptBox{background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;color:#334155;margin-top:6px}
-.qrNote{font-size:11px;color:#b45309;background:#fffbeb;border-radius:10px;padding:99px 11px;margin-top:8px}
+*{box-sizing:border-box}html, body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif}
+button, input, textarea, select{font:inherit}button{cursor:pointer}.app{min-height:100vh;display: flex; justify-content:center}.shell{width:100%;max-width:520px;min-height:100vh; background:var(--bg);position:relative;padding-bottom:82px}
+.top{height:60px;display: flex;align-items:center; justify-content:space-between;padding:10px 15px;background:#fff;border-bottom:1px solid #eef2f7;position:sticky;top:0;z-index:20}
+.brand{border:0;background:none;display: flex;align-items:center;gap:99px;padding:0;color:var(--text)}.logo{width:34px;height:34px;border-radius:10px;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:18px}.brand strong{font-size:15px}
+.topRight{display: flex;align-items:center;gap:7px}.pill{border:0;border-radius:999px;padding:6px 9px;font-size:11px;font-weight:700;background:#f1f5f9;color:#475569}.pill.online{background:#ecfdf5;color:#047857}.pill.offline{background:#fffbeb;color:#b45309}.pill.auth{background:#e0f2fe;color:#0369a1}
+main{padding:16px}.hero{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff;border-radius:18px;padding:20px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-60px;bottom:-70px;background:rgba(255,255,255,.08)}.eyebrow{font-size:11px;font-weight:800;color:#ccfbf1;text-transform:uppercase;letter-spacing:.06em}.hero h2{font-size:21px;line-height:1.2; margin:8px 0 0}.hero p{font-size:12px;color:#ccfbf1;margin:7px 0 0}.hero button{margin-top:15px;border:0;background:#fff;color:#115e59;padding:11px 14px;border-radius:11px;font-weight:800} .grid2 {display:grid;grid-template-columns:1fr 1fr;gap:11px}.stats{margin:12px 0}.card{background:#fff;border:1px solid #eef2f7;border-radius:14px}.stat{padding:14px}.stat strong{font-size:27px;display:block}.stat span,.muted{font-size:11px;color:var(--muted)}
+.sync{padding:13px;display:flex;align-items:center; justify-content:space-between}.linkBtn{border:0;background:none;color:var(--teal);font-size:12px;font-weight:800;padding:5px}
+.sectionTitle{font-size:11px;font-weight:850;color:#64748b;text-transform:uppercase;letter-spacing:.08em;margin:18px 0 8px}.record{padding:12px;display: flex;align-items:center; justify-content:space-between;margin-bottom:8px;border:0;background:#fff;width:100%;text-align:left}.record:active{background:#f8fafc}.recordName{font-size:14px;font-weight:700}.risk{display:inline-flex;align-items:center;gap:5px;padding:5px 9px;border-radius:999px;font-size:10px;font-weight:850;white-space:nowrap}.risk.red{color:#b3261e;background:#fdecea}.risk.yellow{color:#8a5a00;background:#fff6dc}.risk.green{color:#1e6b45;background:#e9f7ef}.dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+.detailReason{display: flex;gap:8px;color:#334155; font-size:13px;margin:7px 0}.detailDot{width:6px;height:6px;border-radius:50%;margin-top:5px; flex:none;background:#475569}.transcriptBox{background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;color:#334155;margin-top:6px}
+.qrNote{font-size:11px;color:#b45309;background:#fffbeb;border-radius:10px;padding:9px 11px;margin-top:8px}
 .disclaimer{text-align:center;color:#94a3b8;font-size:11px;line-height:1.5;margin:18px 5px}
-.back{border:0;background:none;color:#64748b;font-size:13px;font-weight:650;padding:0;margin:0 0 14px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.input,.textarea,.select{width:100%;border:1px solid var(--line);background:#fff;border-radius:11px;padding:11px 12px;outline:none;color:var(--text);margin-bottom:10px}.input:focus,.textarea:focus,.select:focus{border-color:#5eead4;box-shadow:0 0 0 3px rgba(20,184,166,.1)}.textarea{resize:vertical;min-height:92px}
+.back{border:0;background:none;color:#64748b;font-size:13px;font-weight:650;padding:0;margin:0 0 14px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.input,.textarea,.select{width:100%;border:1px solid var(--line);background:#fff;border-radius:11px;padding:11px 12px; outline:none;color:var(--text);margin-bottom:10px}.input:focus, .textarea:focus,.select:focus{border-color:#5eead4;box-shadow:0 0 0 3px rgba(20,184,166,.1)}.textarea {resize:vertical;min-height:92px}
 .voice{text-align:center;padding:17px 0}.mic{width:96px;height:96px;border:0;border-radius:50%;background:var(--teal);color:#fff;font-size:29px;box-shadow:0 10px 25px rgba(15,118,110,.2)}.mic.listening{background:#ef4444;box-shadow:0 10px 25px rgba(239,68,68,.2)}.voiceTitle{font-size:14px;font-weight:700;margin-top:10px}
-.quick{display:flex;flex-wrap:wrap;gap:7px}.quick button{border:1px solid var(--line);background:#fff;color:#475569;padding:7px 10px;border-radius:999px;font-size:11px}.quick button.active{background:var(--teal);border-color:var(--teal);color:#fff}
+.quick{display:flex; flex-wrap:wrap;gap:7px}.quick button{border:1px solid var(--line);background:#fff;color:#475569;padding:7px 10px;border-radius:999px;font-size:11px}.quick button.active{background:var(--teal); border-color:var(--teal);color:#fff}
 .primary,.dark,.outline{width:100%;border-radius:11px;padding:13px;font-weight:800;font-size:13px;margin-top:8px}.primary{border:0;background:var(--teal);color:#fff}.dark{border:0;background:#0f172a;color:#fff}.outline{border:1px solid var(--line);background:#fff;color:#334155}.primary:disabled{background:#e2e8f0;color:#94a3b8;cursor:not-allowed}
-.loader{height:58vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#475569}.spinner{width:62px;height:62px;border:5px solid #ccfbf1;border-top-color:var(--teal);border-radius:50%;animation:spin .9s linear infinite;margin-bottom:18px}@keyframes spin{to{transform:rotate(360deg)}}
-.resultBanner{border-radius:17px;padding:25px;text-align:center}.resultIcon{width:64px;height:64px;border-radius:50%;background:#fff;display:grid;place-items:center;margin:0 auto 11px;font-size:28px}.box{padding:15px;margin-top:12px}.boxTitle{font-size:10px;font-weight:850;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px}.reason{display:flex;gap:8px;color:#334155;font-size:13px;margin:7px 0}.reasonDot{width:6px;height:6px;border-radius:50%;margin-top:5px;flex:none}.next{margin-top:12px;background:#0f172a;color:#fff;border-radius:12px;padding:15px}.next .boxTitle{color:#94a3b8}
-.refHead{padding:15px;display:flex;justify-content:space-between;align-items:center}.refBody{padding:15px}.facility{display:flex;gap:9px;margin:13px 0}.qrWrap{text-align:center;padding:8px}.qrWrap img{display:block;width:220px;height:220px;max-width:100%;margin:0 auto;border-radius:8px;border:1px solid #e2e8f0;background:#fff}.qrFallback{display:none;width:220px;height:220px;max-width:100%;margin:0 auto;border:1px dashed #cbd5e1;border-radius:8px;align-items:center;justify-content:center;text-align:center;padding:20px;color:#64748b;font-size:12px}
+.loader {height:58vh; display: flex; flex-direction:column; align-items:center; justify-content:center;text-align:center;color:#475569}.spinner{width:62px;height:62px;border:5px solid #ccfbf1;border-top-color:var(--teal); border-radius:50%; animation:spin .9s linear infinite;margin-bottom:18px}@keyframes spin{to{transform:rotate(360deg)}}
+.resultBanner{border-radius:17px;padding:25px;text-align:center}.resultIcon{width:64px;height:64px;border-radius:50%;background:#fff;display:grid;place-items:center;margin:0 auto 11px;font-size:28px}.box{padding:15px;margin-top:12px}.boxTitle{font-size:10px;font-weight:850;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em; margin-bottom:7px}.reason{display:flex;gap:8px;color:#334155; font-size:13px;margin:7px 0}.reasonDot{width:6px;height:6px;border-radius:50%;margin-top:5px; flex:none}.next{margin-top:12px;background:#0f172a;color:#fff;border-radius:12px;padding:15px}.next .boxTitle{color:#94a3b8}
+.refHead{padding:15px; display: flex; justify-content:space-between; align-items:center}.refBody{padding:15px}.facility{display: flex;gap:9px;margin:13px 0}.qrWrap{text-align:center;padding:8px}.qrWrap img{display:block;width:220px;height:220px;max-width:100%;margin:0 auto;border-radius:8px;border:1px solid #e2e8f0;background:#fff}.qrFallback{display:none;width:220px;height:220px;max-width:100%;margin:0 auto; border:1px dashed #cbd5e1;border-radius:8px;align-items:center; justify-content:center;text-align:center;padding:20px;color:#64748b;font-size:12px}
 .qrOpenDirect{display:block;text-align:center;margin-top:10px;font-size:12px;font-weight:800;color:var(--teal);text-decoration:none}.actions{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #eef2f7}.actions button{border:0;background:#fff;padding:12px;font-size:12px;font-weight:800;color:var(--teal)}.actions button+button{border-left:1px solid #eef2f7;color:#475569}
-.qrGenerator{padding:15px}.qrLarge{margin:15px auto;width:240px;height:240px;display:grid;place-items:center;background:#fff;border:1px solid #e2e8f0;border-radius:12px}.qrLarge img{width:220px;height:220px}.qrHint{text-align:center;color:#64748b;font-size:11px;line-height:1.5}.smallRow{display:flex;gap:8px}.smallRow>*{flex:1}.toast{display:none;position:fixed;left:50%;bottom:92px;transform:translateX(-50%);z-index:100;background:#0f172a;color:#fff;border-radius:10px;padding:10px 14px;font-size:12px;box-shadow:0 8px 25px rgba(0,0,0,.2)}
-.bottom{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:520px;background:#fff;border-top:1px solid #eef2f7;display:grid;grid-template-columns:repeat(6,1fr);padding:7px 4px;z-index:30}.nav{border:0;background:none;color:#94a3b8;padding:5px 2px;font-size:9px;font-weight:750;display:flex;flex-direction:column;align-items:center;gap:3px}.nav.active{color:var(--teal)}.navIcon{font-size:19px;line-height:20px}
-.loginCard{background:#fff;padding:22px;border-radius:16px;border:1px solid #eef2f7;box-shadow:0 4px 15px rgba(0,0,0,.03);margin-top:10px}
-.label{font-size:12px;font-weight:700;color:#334155;margin-bottom:4px;display:block}
-.authTabs{display:flex;gap:10px;margin-bottom:18px;border-bottom:2px solid #eef2f7;padding-bottom:10px}
+.qrGenerator {padding:15px}.qrLarge{margin:15px auto;width:240px;height:240px;display:grid;place-items:center;background:#fff;border:1px solid #e2e8f0;border-radius:12px}.qrLarge img{width:220px;height:220px}.qrHint{text-align:center;color:#64748b;font-size:11px;line-height:1.5}.smallRow{display: flex;gap:8px}.smallRow>*{flex:1}.toast{display:none;position:fixed;left:50%;bottom:92px;transform:translateX(-50%);z-index:100;background:#0f172a;color:#fff;border-radius:10px;padding:10px 14px;font-size:12px;box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.bottom{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:520px;background:#fff;border-top:1px solid #eef2f7;display:grid;grid-template-columns:repeat(6,1fr); padding:7px 4px;z-index:30}.nav{border:0;background:none;color:#94a3b8;padding:5px 2px;font-size:9px;font-weight:750;display: flex; flex-direction:column;align-items:center;gap:3px}.nav.active {color:var(--teal)}.navIcon{font-size:19px;line-height:20px}
+.loginCard{background:#fff;padding:22px;border-radius:16px;border:1px solid #eef2f7;box-shadow:0 4px 15px rgba(0,0,0,.03); margin-top:10px}
+label{font-size:12px;font-weight:700;color:#334155;margin-bottom:4px;display:block}
+.authTabs{display: flex;gap:10px;margin-bottom:18px;border-bottom:2px solid #eef2f7;padding-bottom:10px}
 .authTabBtn{border:0;background:none;font-size:15px;font-weight:800;padding:6px 10px;border-radius:8px;color:#94a3b8}
-.authTabBtn.active{color:var(--teal);background:#f0fdfa}
+.authTabBtn.active{color:var(--teal); background:#f0fdfa}
 .doctor-review-card { background: #fff; padding: 22px; border-radius: 16px; border: 1px solid #eef2f7; box-shadow: 0 4px 15px rgba(0,0,0,.03); margin-top: 15px; }
 .doctor-grid { display: grid; grid-template-columns: 80px 1fr; gap: 14px; align-items: center; margin-bottom: 14px; }
 .doctor-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--teal); }
 .doctor-info h4 { margin: 0 0 2px; font-size: 15px; color: var(--text); }
 .doctor-info p { margin: 0; font-size: 12px; color: var(--muted); }
 .review-quote { font-style: italic; font-size: 13px; line-height: 1.5; color: #334155; background: #f8fafc; padding: 12px; border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; margin-top: 10px; }
-@media(max-width:380px){.row{grid-template-columns:1fr}.bottom{grid-template-columns:repeat(6,1fr)}}
-@media print{.top,.bottom,.back,.noPrint,button{display:none!important}.shell{max-width:none;padding:0}.refCard{border:0}}
-</style>
-<style id="case-management-css">
-.statusPill{display:inline-flex;align-items:center;gap:5px;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}.status-pending{background:#fff7ed;color:#9a3412}.status-review{background:#eff6ff;color:#1d4ed8}.status-followup{background:#ecfdf5;color:#047857}.status-referred{background:#fef2f2;color:#b91c1c}.status-closed{background:#f1f5f9;color:#475569}.caseActions{display:grid;grid-template-columns:1fr;gap:9px;margin-top:12px}.caseActions button{min-height:44px}.doctorHero{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff;border-radius:18px;padding:18px;box-shadow:0 10px 30px rgba(15,118,110,.16)}.doctorHero h2{margin:0 0 5px}.metricGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}.metricCard{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:12px;text-align:center}.metricCard strong{display:block;font-size:22px}.metricCard span{font-size:10px;color:#64748b}.filterRow{display:flex;gap:7px;overflow:auto;padding-bottom:4px}.filterRow button{white-space:nowrap}.examBox{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:12px;margin-top:10px}.caseMeta{display:grid;grid-template-columns:1fr 1fr;gap:8px}.caseMeta div{background:#f8fafc;border-radius:10px;padding:9px}.caseMeta small{display:block;color:#64748b;font-size:10px}.caseMeta b{font-size:12px}.dangerBtn{background:#dc2626!important;color:white!important}.successBtn{background:#047857!important;color:white!important}.blueBtn{background:#2563eb!important;color:white!important}
-@media(max-width:420px){.metricGrid{grid-template-columns:repeat(2,1fr)}}
+.statusPill{display:inline-flex;align-items:center;gap:5px;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}.status-pending{background:#fff7ed;color:#9a3412}.status-review{background:#eff6ff;color:#1d4ed8}.status-followup{background:#ecfdf5;color:#047857}.status-referred{background:#fef2f2;color:#b91c1c}.status-closed{background:#f1f5f9;color:#475569}.caseActions{display:grid;grid-template-columns:1fr;gap:9px;margin-top:12px}.caseActions button{min-height:44px}.doctorHero{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff;border-radius:18px;padding:18px;box-shadow:0 10px 30px rgba(15,118,110,.16)}.doctorHero h2 {margin:0 0 5px}.metricGrid{display:grid;grid-template-columns:repeat(4,1fr); gap:8px;margin:12px 0}.metricCard{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:12px; text-align:center}.metricCard strong{display:block;font-size:22px}.metricCard span{font-size:10px;color:#64748b}.filterRow{display: flex;gap:7px;overflow:auto;padding-bottom:4px}.filterRow button{white-space:nowrap}.examBox{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:12px;margin-top:10px}.caseMeta {display:grid;grid-template-columns:1fr 1fr;gap:8px}.caseMeta div{background:#f8fafc;border-radius:10px;padding:9px}.caseMeta small{display:block;color:#64748b;font-size:10px}.caseMeta b{font-size:12px}.dangerBtn{background:#dc2626!important;color:white!important}.successBtn{background:#047857!important;color:white!important}.blueBtn{background:#2563eb!important;color:white!important}
+@media (max-width:420px){.metricGrid{grid-template-columns:repeat(2,1fr)}}
+@media print{.top,.bottom,.back,.noPrint, button {display:none!important}.shell{max-width:none;padding:0}.refCard{border:0}}
 </style>
 </head>
-<body> <div class="app"><div class="shell">
+<body>
+<div class="app"><div class="shell">
 <header class="top">
-<button class="brand" onclick="App.go('home')"><span class="logo">⚕</span><strong id="appName">AshaCare</strong></button>
+<button class="brand" onclick="App.go('home')"><span class="logo">✚</span><strong id="appName">Asha Care</strong></button>
 <div class="topRight">
 <span id="userBadge" class="pill auth" onclick="App.logout()" title="Click to Logout">Lock</span>
-<span id="connection" class="pill offline">● Offline</span>
+<span id="connection" class="pill offline"> Offline</span>
 <button class="pill" onclick="App.toggleLang()" id="langBtn">हि</button>
 </div>
 </header>
@@ -60,662 +58,461 @@ main{padding:16px}.hero{background:linear-gradient(135deg,#0f766e,#115e59);color
 <nav class="bottom">
 <button class="nav active" id="nav-home" onclick="App.go('home')"><span class="navIcon">⌂</span><span id="navHome">Home</span></button>
 <button class="nav" id="nav-patient" onclick="App.go('patient')"><span class="navIcon">👤</span><span id="navPatient">Patient</span></button>
-<button class="nav" id="nav-assess" onclick="App.newAssessment()"><span class="navIcon">＋</span><span id="navAssess">Child Assessment</span></button>
-<button class="nav" id="nav-records" onclick="App.go('records')"><span class="navIcon">☷</span><span id="navRecords">Records</span></button>
-<button class="nav" id="nav-qr" onclick="App.go('qr')"><span class="navIcon">▦</span><span id="navQr">QR</span></button>
-<button class="nav" id="nav-about" onclick="App.go('about')"><span class="navIcon">ℹ</span><span id="navAbout">About</span></button>
+<button class="nav" id="nav-assess" onclick="App.newAssessment()"><span class="navIcon">+</span><span id="navAssess"> Child Assessment</span></button>
+<button class="nav" id="nav-records" onclick="App.go('records')"><span class="navIcon">📋</span><span id="navRecords">Records</span></button>
+<button class="nav" id="nav-qr" onclick="App.go('qr')"><span class="navIcon">☵</span><span id="navQr">QR</span></button>
+<button class="nav" id="nav-about" onclick="App.go('about')"><span class="navIcon">i</span><span id="navAbout">About</span></button>
 </nav>
 <div id="toast" class="toast"></div>
 </div></div>
+
 <script>
-const T={
-en:{appName:"AshaCare",tagline:"Pediatric red-flag triage assistant",home:"Home",newAssessment:"New Assessment",records:"Records",startAssessment:"Start New Assessment",todaysCases:"Today's cases",pendingFollowups:"Pending follow-ups",recentAssessments:"Recent assessments",online:"Online",offline:"Offline — will sync later",syncNow:"Sync now",synced:"All records synced",tapToSpeak:"Tap to speak symptoms",listening:"Listening…",orType:"…or type / edit below",quickAdd:"Quick-add common signs",childName:"Child's name (optional)",childAge:"Age (years)",analyze:"Analyze symptoms",analyzing:"Checking against WHO warning signs…",back:"Back",riskRed:"REFER IMMEDIATELY",riskYellow:"MONITOR CLOSELY",riskGreen:"ROUTINE CARE",flaggedBecause:"Flagged because:",possible:"Possible concern:",nextSteps:"Recommended next step",generateReferral:"Generate referral slip",saveMonitor:"Save & set monitoring reminder",newCase:"Start another assessment",nearestFacility:"Nearest district facility",away:"away",shareSlip:"Share with family",printSlip:"Print slip",followUp:"Follow-up reminder",remindIn:"Remind me to check in",days3:"3 days",days7:"7 days",reminderSet:"Reminder set",goHome:"Done — back to home",scanNote:"Hospital staff can scan this code to pull up the full case instantly.",caseId:"Case ID",noSpeechSupport:"Voice input isn't supported in this browser — please type instead.",weekAgo:"2 days ago",qrTitle:"QR Code Generator",qrText:"Enter case information or any text below.",generateQr:"Generate QR",downloadQr:"Download QR",copyQr:"Copy content",qrEmpty:"Enter some text to generate a QR code.",disclaimer:"This tool assists your judgment. It does not diagnose or replace a doctor.",referralSlip:"Referral Slip",childLabel:"Child",symptomsRecorded:"Symptoms recorded",noRecords:"No assessments yet",tapForDetails:"Tap a case to see full details",micDenied:"Microphone permission denied — allow mic access in your browser/site settings and try again.",micNoSpeech:"No speech detected — try again, closer to the mic.",micNetwork:"Voice recognition needs an internet connection — it isn't fully offline in this browser demo.",micNotSecure:"Voice input needs this page opened over https:// (or localhost). It's often blocked when opened as a local file — host it online to test voice.",micGeneric:"Voice input failed — please type instead.",openInBrowser:"Open QR in browser",retryQr:"Retry QR",generatedOn:"Generated",loginTitle:"Worker Access",enterName:"Full Name",enterWorkerId:"Worker / ID Number",enterPin:"Enter Passcode / PIN",loginBtn:"Login & Access",invalidPin:"Invalid passcode / PIN.",missingDetails:"Please enter all required details.",registeredPatients:"Registered Patient Records",savePatient:"Save Patient Data",aboutTitle:"About AshaCare",aboutText1:"AshaCare is a digital frontline screening and clinical decision support companion designed specifically for ASHA workers, community health providers, and rural medical officers.",aboutText2:"By evaluating symptoms against pediatric warning signs and standardized triage pathways (such as fever, pallor, and red-flag indicators), AshaCare helps bridge the gap between early symptom detection and prompt referral to district medical facilities.",aboutText3:"Built with offline resilience, multilingual support (English, Hindi, Odia), and secure worker authentication, AshaCare empowers frontline health workers to deliver safer, faster, and more reliable pediatric care.",doctorReviewTitle:"Doctor & Health Worker Reviews",doc1Name:"Dr. Ananya Roy, MD (Pediatrics)",doc1Role:"District Chief Medical Officer",doc1Review:"AshaCare has streamlined our referral process significantly. Grassroots workers can now accurately flag high-risk symptoms and send properly structured details to our facility.",doc2Name:"Sunita Murmu",doc2Role:"Senior ASHA Supervisor",doc2Review:"The multilingual support and offline capabilities make this app extremely practical for field use. It gives our workers the confidence needed for timely interventions."},
-hi:{appName:"आशाकेयर",tagline:"बाल कैंसर चेतावनी संकेत सहायक",home:"होम",newAssessment:"नई जांच",records:"रिकॉर्ड",startAssessment:"नई जांच शुरू करें",todaysCases:"आज के मामले",pendingFollowups:"लंबित फॉलो-अप",recentAssessments:"हाल की जांचें",online:"ऑनलाइन",offline:"ऑफ़लाइन — बाद में सिंक होगा",syncNow:"अभी सिंक करें",synced:"सभी रिकॉर्ड सिंक हो गए",tapToSpeak:"लक्षण बोलने के लिए टैप करें",listening:"सुन रहा है…",orType:"…या नीचे टाइप / संपादित करें",quickAdd:"सामान्य लक्षण जोड़ें",childName:"बच्चे का नाम (वैकल्पिक)",childAge:"उम्र (वर्ष)",analyze:"लक्षणों की जांच करें",analyzing:"WHO चेतावनी संकेतकों से मिलान हो रहा है…",back:"वापस",riskRed:"तुरंत रेफर करें",riskYellow:"बारीकी से निगरानी करें",riskGreen:"सामान्य देखभाल",flaggedBecause:"चिह्नित करने का कारण:",possible:"संभावित चिंता:",nextSteps:"अनुशंसित अगला कदम",generateReferral:"रेफरल स्लिप बनाएं",saveMonitor:"सेव करें और निगरानी रिमाइंडर सेट करें",newCase:"एक और जांच शुरू करें",nearestFacility:"निकटतम जिला अस्पताल",away:"दूर",shareSlip:"परिवार के साथ साझा करें",printSlip:"स्लिप प्रिंट करें",followUp:"फॉलो-अप रिमाइंडर",remindIn:"मुझे जांच के लिए याद दिलाएं",days3:"3 दिन",days7:"7 दिन",reminderSet:"रिमाइंडर सेट हो गया",goHome:"पूर्ण — होम पर वापस जाएं",scanNote:"अस्पताल स्टाफ इस कोड को स्कैन करके पूरा मामला तुरंत देख सकता है।",caseId:"केस आईडी",noSpeechSupport:"इस ब्राउज़र में वॉयस इनपुट समर्थित नहीं है — कृपया टाइप करें।",weekAgo:"2 दिन पहले",qrTitle:"QR कोड जनरेटर",qrText:"नीचे केस की जानकारी या कोई भी टेक्स्ट लिखें।",generateQr:"QR बनाएं",downloadQr:"QR डाउनलोड करें",copyQr:"टेक्स्ट कॉपी करें",qrEmpty:"QR बनाने के लिए टेक्स्ट लिखें।",disclaimer:"यह टूल आपकी सहायता करता है। यह निदान नहीं करता या डॉक्टर का विकल्प नहीं है।",referralSlip:"रेफरल स्लिप",childLabel:"बच्चा",symptomsRecorded:"दर्ज लक्षण",noRecords:"अभी तक कोई जांच नहीं",tapForDetails:"पूरी जानकारी देखने के लिए केस पर टैप करें",micDenied:"माइक्रोफ़ोन अनुमति अस्वीकृत — ब्राउज़र सेटिंग में माइक अनुमति दें और फिर से प्रयास करें।",micNoSpeech:"कोई आवाज़ नहीं मिली — माइक के पास फिर से बोलें।",micNetwork:"वॉयस पहचान के लिए इंटरनेट चाहिए — यह ब्राउज़र डेमो पूरी तरह ऑफ़लाइन नहीं है।",micNotSecure:"वॉयस इनपुट के लिए यह पेज https:// (या localhost) पर खुला होना चाहिए।",micGeneric:"वॉयस इनपुट विफल — कृपया टाइप करें।",openInBrowser:"ब्राउज़र में QR खोलें",retryQr:"QR फिर कोशिश करें",generatedOn:"जनरेट किया गया",loginTitle:"कार्यकर्ता एक्सेस",enterName:"पूरा नाम",enterWorkerId:"कार्यकर्ता / आईडी नंबर",enterPin:"पासकोड / पिन दर्ज करें",loginBtn:"लॉगिन करें",invalidPin:"अमान्य पासकोड / पिन।",missingDetails:"कृपया सभी आवश्यक जानकारी दर्ज करें।",registeredPatients:"पंजीकृत मरीज रिकॉर्ड",savePatient:"मरीज का डेटा सहेजें",aboutTitle:"आशाकेयर के बारे में",aboutText1:"आशाकेयर एक डिजिटल फ्रंटलाइन स्क्रीन-इन और क्लिनिकल डिसीजन सपोर्ट साथी है।",aboutText2:"बाल चिकित्सा चेतावनी संकेतकों के खिलाफ लक्षणों का मूल्यांकन करके आशाकेयर त्वरित रेफरल में मदद करता है।",aboutText3:"ऑफ़लाइन समर्थन और बहुभाषी सुविधा के साथ सुरक्षित बाल चिकित्सा देखभाल प्रदान करता है।",doctorReviewTitle:"डॉक्टर और स्वास्थ्य कार्यकर्ता समीक्षाएं",doc1Name:"डॉ. अनन्या रॉय, एमडी (बाल रोग)",doc1Role:"जिला मुख्य चिकित्सा अधिकारी",doc1Review:"आशाकेयर ने हमारी रेफरल प्रक्रिया को काफी सुव्यवस्थित किया है।",doc2Name:"सुनीता मुर्मू",doc2Role:"वरिष्ठ आशा पर्यवेक्षक",doc2Review:"बहुभाषी समर्थन और ऑफ़लाइन क्षमताएं इस ऐप को फील्ड उपयोग के लिए व्यावहारिक बनाती हैं।"},
-or:{appName:"ଆଶାକେୟାର",tagline:"ଶିଶୁ ସ୍ୱାସ୍ଥ୍ୟ ଚେତାବନୀ ସଙ୍କେତ ସହାୟକ",home:"ହୋମ",newAssessment:"ନୂଆ ଯାଞ୍ଚ",records:"ରେକର୍ଡ",startAssessment:"ନୂଆ ଯାଞ୍ଚ ସୁରୁ କରନ୍ତୁ",todaysCases:"ଆଜିର ମାମଲା",pendingFollowups:"ବାକି ଫଲୋ-ଅପ",recentAssessments:"ସାମ୍ପ୍ରତିକ ଯାଞ୍ଚ",online:"ଅନଲାଇନ",offline:"ଅଫଲାଇନ — ପରେ ସିଙ୍କ ହେବ",syncNow:"ବର୍ତ୍ତମାନ ସିଙ୍କ କରନ୍ତୁ",synced:"ସବୁ ରେକର୍ଡ ସିଙ୍କ ହୋଇଗଲା",tapToSpeak:"ଲକ୍ଷଣ କହିବାକୁ ଟାପ କରନ୍ତୁ",listening:"ଶୁଣୁଛି…",orType:"…କିମ୍ବା ତଳେ ଟାଇପ୍ କରନ୍ତୁ",quickAdd:"ସାଧାରଣ ଲକ୍ଷଣ ଯୋଡ଼ନ୍ତୁ",childName:"ଶିଶୁର ନାମ (ଇଚ୍ଛାଧୀନ)",childAge:"ବୟସ (ବର୍ଷ)",analyze:"ଲକ୍ଷଣ ଯାଞ୍ଚ କରନ୍ତୁ",analyzing:"WHO ଚେତାବନୀ ସଙ୍କେତ ସହିତ ମେଳ ହେଉଛି…",back:"ଫେରନ୍ତୁ",riskRed:"ତୁରନ୍ତ ରେଫର କରନ୍ତୁ",riskYellow:"ନିରୀକ୍ଷଣ କରନ୍ତୁ",riskGreen:"ସାଧାରଣ ଯତ୍ନ",flaggedBecause:"ଚିହ୍ନଟ କାରଣ:",possible:"ସମ୍ଭାବ୍ୟ ଚିନ୍ତା:",nextSteps:"ପରାମର୍ଶିତ ପରବର୍ତ୍ତୀ ପଦକ୍ଷେପ",generateReferral:"ରେଫରାଲ ସ୍ଲିପ୍ ତିଆରି କରନ୍ତୁ",saveMonitor:"ସେଭ୍ କରନ୍ତୁ ଓ ରିମାଇଣ୍ଡର ସେଟ୍ କରନ୍ତୁ",newCase:"ଅନ୍ୟ ଏକ ଯାଞ୍ଚ ସୁରୁ କରନ୍ତୁ",nearestFacility:"ନିକଟତମ ଜିଲ୍ଲା ଡାକ୍ତରଖାନା",away:"ଦୂର",shareSlip:"ପରିବାର ସହିତ ସେୟାର କରନ୍ତୁ",printSlip:"ସ୍ଲିପ୍ ପ୍ରିଣ୍ଟ କରନ୍ତୁ",followUp:"ଫଲୋ-ଅପ ରିମାଇଣ୍ଡର",remindIn:"ମୋତେ ଯାଞ୍ଚ କରିବାକୁ ମନେ ପକାନ୍ତୁ",days3:"3 ଦିନ",days7:"7 ଦିନ",reminderSet:"ରିମାଇଣ୍ଡର ସେଟ୍ ହୋଇଗଲା",goHome:"ସମାପ୍ତ — ହୋମକୁ ଫେରନ୍ତୁ",scanNote:"ଡାକ୍ତରଖାନା ଷ୍ଟାଫ୍ ଏହି କୋଡ୍ ସ୍କାନ କରି ପୁରା ମାମଲା ତୁରନ୍ତ ଦେଖି ପାରିବେ।",caseId:"କେସ୍ ଆଇଡି",noSpeechSupport:"ଏହି ବ୍ରାଉଜରରେ ଭଏସ୍ ଇନପୁଟ୍ ସମର୍ଥିତ ନୁହେଁ — ଦୟାକରି ଟାଇପ୍ କରନ୍ତୁ।",weekAgo:"2 ଦିନ ପୂର୍ବେ",qrTitle:"QR କୋଡ୍ ଜେନେରେଟର",qrText:"ତଳେ କେସ୍ ସୂଚନା କିମ୍ବା ଯେକୌଣସି ଟେକ୍ସଟ୍ ଲେଖନ୍ତୁ।",generateQr:"QR ତିଆରି କରନ୍ତୁ",downloadQr:"QR ଡାଉନଲୋଡ୍ କରନ୍ତୁ",copyQr:"ଟେକ୍ସଟ୍ କପି କରନ୍ତୁ",qrEmpty:"QR ତିଆରି କରିବାକୁ ଟେକ୍ସଟ୍ ଲେଖନ୍ତୁ।",disclaimer:"ଏହି ଟୁଲ୍ ଆପଣଙ୍କ ନିଷ୍ପତ୍ତିରେ ସାହାଯ୍ୟ କରେ।",referralSlip:"ରେଫରାଲ ସ୍ଲିପ୍",childLabel:"ଶିଶୁ",symptomsRecorded:"ଦର୍ଜ ଲକ୍ଷଣ",noRecords:"ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ଯାଞ୍ଚ ନାହିଁ",tapForDetails:"ପୁରା ସୂଚନା ଦେଖିବାକୁ କେସ୍ ଉପରେ ଟାପ୍ କରନ୍ତୁ",micDenied:"ମାଇକ୍ରୋଫୋନ୍ ଅନୁମତି ମନା।",micNoSpeech:"କୌଣସି ଶବ୍ଦ ମିଳିଲା ନାହିଁ।",micNetwork:"ଭଏସ୍ ଚିହ୍ନଟ ପାଇଁ ଇଣ୍ଟରନେଟ୍ ଦରକାର।",micNotSecure:"ଭଏସ୍ ଇନପୁଟ୍ ପାଇଁ https:// ଆବଶ୍ୟକ।",micGeneric:"ଭଏସ୍ ଇନପୁଟ୍ ବିଫଳ — ଦୟାକରି ଟାଇପ୍ କରନ୍ତୁ।",openInBrowser:"ବ୍ରାଉଜରରେ QR ଖୋଲନ୍ତୁ",retryQr:"QR ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ",generatedOn:"ତିଆରି ହେଲା",loginTitle:"କର୍ମୀ ଏକ୍ସେସ",enterName:"ପୁରା ନାମ",enterWorkerId:"କର୍ମୀ / ଆଇଡି ନମ୍ବର",enterPin:"ପାସକୋଡ୍ / ପିନ୍",loginBtn:"ଲଗଇନ୍ କରନ୍ତୁ",invalidPin:"ଅମାନ୍ୟ ପାସକୋଡ୍ / ପିନ୍।",missingDetails:"ଦୟାକରି ସମସ୍ତ ସୂଚନା ଦିଅନ୍ତୁ।",registeredPatients:"ପଞ୍ଜୀକୃତ ରୋଗୀ ରେକର୍ଡ",savePatient:"ରୋଗୀ ତଥ୍ୟ ସଂରକ୍ଷଣ କରନ୍ତୁ",aboutTitle:"ଆଶାକେୟାର ବିଷୟରେ",aboutText1:"ଆଶାକେୟାର ଫ୍ରଣ୍ଟଲାଇନ୍ ସ୍କ୍ରିନିଂ ଏବଂ କ୍ଲିନିକାଲ୍ ନିଷ୍ପତ୍ତି ସହାୟତା ସାଥୀ।",aboutText2:"ଶିଶୁ ଚେତାବନୀ ସଙ୍କେତ ସହିତ ଲକ୍ଷଣର ମୂଲ୍ୟାଙ୍କନ କରି ଆଶାକେୟାର ଶୀଘ୍ର ରେଫରାଲରେ ସାହାଯ୍ୟ କରେ।",aboutText3:"ଅଫଲାଇନ୍ ସମର୍ଥନ ଏବଂ ବହୁଭାଷୀ ସୁବିଧା।",doctorReviewTitle:"ଡାକ୍ତର ଏବଂ ସ୍ୱାସ୍ଥ୍ୟ କର୍ମୀ ସମୀକ୍ଷା",doc1Name:"ଡା. ଅନନ୍ୟା ରାୟ, ଏମଡି (ଶିଶୁ ରୋଗ)",doc1Role:"ଜିଲ୍ଲା ମୁଖ୍ୟ ଚିକିତ୍ସା ଅଧିକାରୀ",doc1Review:"ଆଶାକେୟାର ଆମର ରେଫରାଲ୍ ପ୍ରକ୍ରିୟାକୁ ସହଜ କରିଛି।",doc2Name:"ସୁନୀତା ମୁର୍ମୁ",doc2Role:"ବିଶେଷଜ୍ଞ ଆଶା ପରିଦର୍ଶକ",doc2Review:"ବହୁଭାଷୀ ସମର୍ଥନ ଏବଂ ଅଫଲାଇନ୍ କ୍ଷମତା ଏହାକୁ ବ୍ୟବହାରିକ କରିଥାଏ।"}
-}; 
+const T = {
+  en: {
+    appName: "Asha Care", tagline: "Pediatric red-flag triage assistant", home: "Home", newAssessment: "New Assessment", records: "Records", startAssessment: "Start New Assessment", todaysCases: "Today's cases", pendingFollowups: "Pending follow-ups", recentAssessments: "Recent assessments", online: "Online", offline: "Offline - will sync later", syncNow: "Sync now", synced: "All records synced", tapToSpeak: "Tap to speak symptoms", listening: "Listening...", orType: "...or type / edit below", quickAdd: "Quick-add common signs", childName: "Child's name (optional)", childAge: "Age", analyze: "Analyze symptoms", analyzing: "Checking against WHO warning signs...", back: "Back", riskRed: "REFER IMMEDIATELY", riskYellow: "MONITOR CLOSELY", riskGreen: "ROUTINE CARE", flaggedBecause: "Flagged because:", possible: "Possible concern:", nextSteps: "Recommended next step", generateReferral: "Generate referral slip", saveMonitor: "Save & set monitoring reminder", newCase: "Start another assessment", nearestFacility: "Nearest district facility", away: "away", shareSlip: "Share with family", printSlip: "Print slip", followUp: "Follow-up reminder", remindIn: "Remind me to check in", days3: "3 days", days7: "7 days", reminderSet: "Reminder set", goHome: "Done - back to home", scanNote: "Hospital staff can scan this code to pull up the full case instantly.", caseId: "Case ID", weekAgo: "2 days ago", qrTitle: "QR Code Generator", qrText: "Enter case information or any text below.", generateQr: "Generate QR", downloadQr: "Download QR", copyQr: "Copy content", qrEmpty: "Enter some text to generate a QR code.", disclaimer: "This tool assists your judgment. It does not diagnose or replace a doctor.", referralSlip: "Referral Slip", childLabel: "Child", symptomsRecorded: "Symptoms recorded", noRecords: "No assessments yet", tapForDetails: "Tap a case to see full details", micDenied: "Microphone permission denied", micNoSpeech: "No speech detected", micNetwork: "Voice recognition needs internet", micNotSecure: "Voice input requires https", micGeneric: "Voice input failed", openInBrowser: "Open QR in browser", retryQr: "Retry QR", generatedOn: "Generated", loginTitle: "Worker Access", enterName: "Full Name", enterWorkerId: "Worker / ID Number", enterPin: "Enter Passcode / PIN", loginBtn: "Login & Access", invalidPin: "Invalid passcode / PIN.", missingDetails: "Please enter all required details.", registeredPatients: "Registered Patient Records", savePatient: "Save Patient Data", aboutTitle: "About Asha Care", doctorReviewTitle: "Doctor & Health Worker Reviews"
+  },
+  hi: {
+    appName: "आशाकेयर", tagline: "बाल कैंसर चेतावनी संकेत सहायक", home: "होम", newAssessment: "नई जांच", records: "रिकॉर्ड", startAssessment: "नई जांच शुरू करें", todaysCases: "आज के मामले", pendingFollowups: "लंबित फॉलो-अप", recentAssessments: "हाल की जांचें", online: "ऑनलाइन", offline: "ऑफ़लाइन", syncNow: "अभी सिंक करें", synced: "सभी रिकॉर्ड सिंक हो गए", tapToSpeak: "लक्षण बोलने के लिए टैप करें", listening: "सुन रहा है...", orType: "...या नीचे टाइप करें", quickAdd: "सामान्य लक्षण जोड़ें", childName: "बच्चे का नाम", childAge: "उम्र", analyze: "लक्षणों की जांच करें", analyzing: "WHO चेतावनी संकेतकों से मिलान हो रहा है...", back: "वापस", riskRed: "तुरंत रेफर करें", riskYellow: "बारीकी से निगरानी करें", riskGreen: "सामान्य देखभाल", flaggedBecause: "कारण:", possible: "संभावित चिंता:", nextSteps: "अगला कदम", generateReferral: "रेफरल स्लिप बनाएं", saveMonitor: "सेव करें", newCase: "एक और जांच", nearestFacility: "निकटतम जिला अस्पताल", away: "दूर", shareSlip: "साझा करें", printSlip: "प्रिंट करें", followUp: "फॉलो-अप", remindIn: "याद दिलाएं", days3: "3 दिन", days7: "7 दिन", reminderSet: "सेट हो गया", goHome: "होम", scanNote: "स्कैन करें।", caseId: "केस आईडी", weekAgo: "2 दिन पहले", qrTitle: "QR जनरेटर", qrText: "टेक्स्ट लिखें", generateQr: "QR बनाएं", downloadQr: "डाउनलोड", copyQr: "कॉपी", qrEmpty: "टेक्स्ट लिखें", disclaimer: "सहायक टूल।", referralSlip: "रेफरल स्लिप", childLabel: "बच्चा", symptomsRecorded: "दर्ज लक्षण", noRecords: "कोई जांच नहीं", tapForDetails: "टैप करें", loginTitle: "कार्यकर्ता एक्सेस", enterName: "पूरा नाम", enterWorkerId: "आईडी नंबर", enterPin: "पिन दर्ज करें", loginBtn: "लॉगिन करें", invalidPin: "अमान्य पिन", missingDetails: "विवरण दर्ज करें", registeredPatients: "पंजीकृत मरीज", savePatient: "सहेजें", aboutTitle: "आशाकेयर", doctorReviewTitle: "समीक्षाएं"
+  },
+  or: {
+    appName: "ଆଶାକେୟାର", tagline: "ଶିଶୁ ଚେତାବନୀ ସଙ୍କେତ ସହାୟକ", home: "ମୁଖ୍ୟ ପୃଷ୍ଠା", newAssessment: "ନୂଆ ଯାଞ୍ଚ", records: "ରେକର୍ଡ", startAssessment: "ନୂଆ ଯାଞ୍ଚ ଆରମ୍ଭ କରନ୍ତୁ", todaysCases: "ଆଜିର ମାମଲା", pendingFollowups: "ବାକି ଫଲୋ-ଅପ୍", recentAssessments: "ସାମ୍ପ୍ରତିକ ଯାଞ୍ଚ", online: "ଅନଲାଇନ୍", offline: "ଅଫଲାଇନ୍", syncNow: "ସିଙ୍କ୍ କରନ୍ତୁ", synced: "ସମସ୍ତ ରେକର୍ଡ ସିଙ୍କ୍ ହୋଇଗଲା", tapToSpeak: "କହିବା ପାଇଁ ଟ୍ୟାପ୍ କରନ୍ତୁ", listening: "ଶୁଣୁଛି...", orType: "...କିମ୍ବା ତଳେ ଟାଇପ୍ କରନ୍ତୁ", quickAdd: "ସାଧାରଣ ଲକ୍ଷଣ ଯୋଡ଼ନ୍ତୁ", childName: "ଶିଶୁର ନାମ", childAge: "ବୟସ", analyze: "ଲକ୍ଷଣ ଯାଞ୍ଚ କରନ୍ତୁ", analyzing: "WHO ସଙ୍କେତ ସହ ମିଳାଯାଉଛି...", back: "ଫେରନ୍ତୁ", riskRed: "ତୁରନ୍ତ ରେଫର କରନ୍ତୁ", riskYellow: "ଧ୍ୟାନର ସହ ନଜର ରଖନ୍ତୁ", riskGreen: "ସାଧାରଣ ଯତ୍ନ", flaggedBecause: "କାରଣ:", possible: "ସମ୍ଭାବ୍ୟ ଚିନ୍ତା:", nextSteps: "ପରବର୍ତ୍ତୀ ପଦକ୍ଷେପ", generateReferral: "ରେଫରାଲ୍ ସ୍ଲିପ୍ ବନାନ୍ତୁ", saveMonitor: "ସେଭ୍ କରନ୍ତୁ", newCase: "ଅନ୍ୟ ଏକ ଯାଞ୍ଚ", nearestFacility: "ନିକଟତମ ଡାକ୍ତରଖାନା", away: "ଦୂର", shareSlip: "ସେୟାର କରନ୍ତୁ", printSlip: "ପ୍ରିଣ୍ଟ କରନ୍ତୁ", followUp: "ଫଲୋ-ଅପ୍", remindIn: "ମନେ ପକାନ୍ତୁ", days3: "୩ ଦିନ", days7: "୭ ଦିନ", reminderSet: "ସେଟ୍ ହୋଇଗଲା", goHome: "ସମ୍ପୂର୍ଣ୍ଣ", scanNote: "ଡାକ୍ତରଖାନା କର୍ମଚାରୀ ଏହି କୋଡ୍ ସ୍କାନ କରିପାରିବେ।", caseId: "କେସ୍ ID", weekAgo: "୨ ଦିନ ପୂର୍ବରୁ", qrTitle: "QR ଜେନେରେଟର", qrText: "ଟେକ୍ସଟ୍ ଲେଖନ୍ତୁ", generateQr: "QR ବନାନ୍ତୁ", downloadQr: "ଡାଉନଲୋଡ୍", copyQr: "କପି", qrEmpty: "ଟେକ୍ସଟ୍ ଲେଖନ୍ତୁ", disclaimer: "ଏହା ଏକ ସହାୟକ ଟୁଲ୍।", referralSlip: "ରେଫରାଲ୍ ସ୍ଲିପ୍", childLabel: "ଶିଶୁ", symptomsRecorded: "ଦର୍ଜ ଲକ୍ଷଣ", noRecords: "କୌଣସି ରେକର୍ଡ ନାହିଁ", tapForDetails: "ଟ୍ୟାପ୍ କରନ୍ତୁ", loginTitle: "କର୍ମଚାରୀ ଲଗଇନ୍", enterName: "ପୂରା ନାମ", enterWorkerId: "ID ନମ୍ବର", enterPin: "ପିନ୍ ଦିଅନ୍ତୁ", loginBtn: "ଲଗଇନ୍", invalidPin: "ଅସଂଗତ ପିନ୍", missingDetails: "ବିବରଣୀ ଭରନ୍ତୁ", registeredPatients: "ପଞ୍ଜୀକୃତ ରୋଗୀ", savePatient: "ସଂରକ୍ଷିତ କରନ୍ତୁ", aboutTitle: "ଆଶାକେୟାର", doctorReviewTitle: "ସମୀକ୍ଷା"
+  }
+};
 
-const dict=[
-["fever_general",["fever","bukhar","temperature","बुखार","ज्वर","ଜ୍ୱର"]],
-["pallor",["pale","pallor","peela","pila","white skin","anemic look","पीलापन","पीला","ଫିକା"]],
-["weight_loss",["weight loss","losing weight","vajan kam","wazan ghatna","thin","वजन घटना","वज़न कम","वजन कम","ଓଜନ କମିବା"]],
-["mass",["mass","lump","swelling","swollen","ganth","soojan","tumor","abdominal swelling","belly swelling","गांठ","सूजन","नई सूजन","ଗଣ୍ଠି","ଫୁଲା"]],
-["bone_pain",["bone pain","joint pain","limping","haddi dard","leg pain not going","won't walk","हड्डी में दर्द","हड्डी दर्द","लंगड़ाना","ହାଡ଼ ଯନ୍ତ୍ରଣା"]],
-["bleeding",["bleeding","bruising","nose bleed","gum bleed","khoon","neel","purple spots","petechiae","blood","vomiting blood","vomit blood","blood in vomit","blood in stool","blood in urine","coughing blood","रक्तस्राव","खून","खून की उल्टी","उल्टी में खून","नील","मसूड़ों से खून","नाक से खून","ରକ୍ତ","ରକ୍ତସ୍ରାବ"]],
-["white_eye",["white pupil","white reflex","white spot in eye","eye glow","aankh safed","cat eye","leukocoria","आंख सफेद","आंख में सफेद","पुतली सफेद","ଆଖିରେ ଧଳା"]],
-["vomiting",["vomiting","vomit","ulti","उल्टी","ବାନ୍ତି"]],
-["headache",["headache","morning headache","sir dard","unsteady walk","balance problem","सिरदर्द","सिर दर्द","ମୁଣ୍ଡ ଯନ୍ତ୍ରଣା","ମୁଣ୍ଡ ବିନ୍ଧା"]],
-["lymph_node",["neck swelling","gilti","lymph node","swollen gland","गिल्टी","गर्दन में सूजन","ବେକରେ ଗଣ୍ଠି"]],
-["fatigue",["fatigue","tired","weakness","kamzori","low energy","no appetite","loss of appetite","कमजोरी","थकान","ଦୁର୍ବଳତା"]]
+const dict = [
+  ["fever_general", ["fever", "bukhar", "jwara", "temperature", "बुखार", "ଜ୍ୱର"]],
+  ["pallor", ["pale", "pallor", "peela", "pila", "phika", "white skin", "anemic look", "પીલાપન", "ଫିକାପଣ", "ପିଲାପଣ"]],
+  ["weight_loss", ["weight loss", "losing weight", "vajan kam", "wazan ghatna", "ozan kami", "thin", "वजन घटना", "ଓଜନ କମିବା"]],
+  ["mass", ["mass", "lump", "swelling", "swollen", "ganth", "ganthi", "soojan", "phula", "tumor", "abdominal swelling", "सूजन", "ગાંઠ", "ଫୁଲା", "ଗାଣ୍ଠି"]],
+  ["bone_pain", ["bone pain", "joint pain", "limping", "haddi dard", "hada dard", "won't walk", "हड्डी दर्द", "ହାଡ଼ ବିନ୍ଧା"]],
+  ["bleeding", ["bleeding", "bruising", "nose bleed", "gum bleed", "khoon", "rakta", "neel", "purple spots", "blood", "रक्तस्राव", "ରକ୍ତସ୍ରାବ"]],
+  ["white_eye", ["white pupil", "white reflex", "white spot in eye", "eye glow", "cat eye", "आंख सफेद", "ଆଖି ଡୋଳା ଧଳା"]],
+  ["vomiting", ["vomiting", "vomit", "ulti", "उल्टी", "ବାନ୍ତି"]],
+  ["headache", ["headache", "morning headache", "sir dard", "munda binda", "सिरदर्द", "ମୁଣ୍ଡ ବିନ୍ଧା"]],
+  ["lymph_node", ["neck swelling", "gilti", "lymph node", "swollen gland", "गिल्टी", "ଗିଲ୍ଟି"]],
+  ["fatigue", ["fatigue", "tired", "weakness", "kamzori", "durbala", "low energy", "कमजोरी", "ଥକାପଣ", "ଦୁର୍ବଳତା"]]
 ];
 
-function hasProlongedFever(text,found){
-if(!found.has("fever_general"))return false;
-const t=text.toLowerCase();
-const wk=t.match(/(\d+)\s*(week|weeks|हफ्ते|हफ़्ते|हफ्ता|ସପ୍ତାହ)/);
-if(wk&&parseInt(wk[1],10)>=2)return true;
-const dy=t.match(/(\d+)\s*(day|days|दिन|ଦିନ)/);
-if(dy&&parseInt(dy[1],10)>=14)return true;
-if(/prolonged|lambe samay|persistent fever|लंबे समय|लगातार बुखार|ଦୀର୍ଘ ସମୟ/.test(t))return true;
-return false; }
-
-const QUICK=[
-{key:"fever_general",en:"Fever 3 weeks",hi:"3 हफ्ते बुखार",or:"3 ସପ୍ତାହ ଜ୍ୱର"},
-{key:"pallor",en:"Pallor",hi:"पीलापन",or:"ଫିକା"},
-{key:"weight_loss",en:"Weight loss",hi:"वजन घटना",or:"ଓଜନ କମିବା"},
-{key:"mass",en:"New swelling",hi:"नई सूजन",or:"ନୂଆ ଫୁଲା"},
-{key:"bone_pain",en:"Bone pain",hi:"हड्डी दर्द",or:"ହାଡ଼ ଯନ୍ତ୍ରଣା"},
-{key:"white_eye",en:"White pupil",hi:"आंख सफेद",or:"ଆଖିରେ ଧଳା"},
-{key:"bleeding",en:"Bleeding/bruising",hi:"रक्तस्राव/नील",or:"ରକ୍ତସ୍ରାବ"},
-{key:"headache",en:"Headache",hi:"सिरदर्द",or:"ମୁଣ୍ଡ ଯନ୍ତ୍ରଣା"},
-{key:"vomiting",en:"Vomiting",hi:"उल्टी",or:"ବାନ୍ତି"}
+const QUICK = [
+  { key: "fever_general", en: "Fever 3 weeks", hi: "3 हफ्ते बुखार", or: "୩ ସପ୍ତାହ ଜ୍ୱର" },
+  { key: "pallor", en: "Pallor", hi: "पीलापन", or: "ଫିକାପଣ / ପିଲାପଣ" },
+  { key: "weight_loss", en: "Weight loss", hi: "वजन घटना", or: "ଓଜନ କମିବା" },
+  { key: "mass", en: "New swelling", hi: "नई सूजन", or: "ନୂଆ ଫୁଲା / ଗାଣ୍ଠି" },
+  { key: "bone_pain", en: "Bone pain", hi: "हड्डी दर्द", or: "ହାଡ଼ ବିନ୍ଧା" },
+  { key: "white_eye", en: "White pupil", hi: "आंख सफेद", or: "ଆଖି ଡୋଳା ଧଳା" },
+  { key: "bleeding", en: "Bleeding/bruising", hi: "रक्तस्राव/नील", or: "ରକ୍ତସ୍ରାବ / କ୍ଷତ" },
+  { key: "headache", en: "Headache", hi: "सिरदर्द", or: "ମୁଣ୍ଡ ବ୍ୟଥା" },
+  { key: "vomiting", en: "Vomiting", hi: "उल्टी", or: "ବାନ୍ତି" }
 ];
 
-const MOCK=[
-{id:"AC-2291",name:"Rohan",age:"4",level:"red",concern:"Possible leukemia",re:["Fever lasting more than 2 weeks","Pallor (pale skin) reported","Weight loss reported"],transcript:"fever for 3 weeks, weight loss, pale",when:"2 days ago"},
-{id:"AC-2288",name:"Priya",age:"7",level:"yellow",concern:"Monitor closely, recheck in a few days",re:["One warning sign present without a red-flag combination"],transcript:"fatigue, low energy",when:"2 days ago"},
-{id:"AC-2281",name:"Amit",age:"2",level:"green",concern:null,re:["No red-flag symptoms or combinations matched"],transcript:"mild cough, no fever",when:"2 days ago"}
-];
 
-const MOCK_PATIENTS=[
-{id:"PAT-101",name:"Rohan Kumar",age:"4",gender:"Male",contact:"+91 9876543210",bloodGroup:"O+",history:"Frequent fever"},
-{id:"PAT-102",name:"Priya Sharma",age:"7",gender:"Female",contact:"+91 9123456789",bloodGroup:"A+",history:"Fatigue"}
-];
+const App = {
+  state: {
+    token: localStorage.getItem('ashacare_token') || '',
+    isAuthenticated: !!localStorage.getItem('ashacare_token'),
+    userName: localStorage.getItem('ashacare_username') || '',
+    workerId: localStorage.getItem('ashacare_workerid') || '',
+    userRole: localStorage.getItem('ashacare_role') || 'ASHA Worker',
+    authTab: "login",
+    lang: "en",
+    screen: "login",
+    online: true,
+    transcript: "",
+    quickKeys: new Set(),
+    childName: "",
+    childAge: "",
+    childAgeUnit: "months",
+    childAgeLabel: "",
+    selectedPatientId: null,
+    result: null,
+    caseId: "",
+    reminderDays: null,
+    listening: false,
+    qrText: "",
+    records: [],
+    patients: [],
+    selectedRecordId: null
+  },
 
-const App={
-state:{isAuthenticated:false,userName:"",workerId:"",userRole:"ASHA Worker",authTab:"login",lang:"en",screen:"login",online:false,transcript:"",quickKeys:new Set(),childName:"",childAge:"",childAgeUnit:"months",childAgeLabel:"",selectedPatientId:null,result:null,caseId:"",reminderDays:null,listening:false,qrText:"",records:MOCK.map(r=>({...r})),patients:MOCK_PATIENTS.map(p=>({...p})),selectedRecordId:null},
-t(){return T[this.state.lang]},
-escape(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))},
-go(s){
-if(!this.state.isAuthenticated && s!=='login'){
-this.toast("Please log in or register first");
-this.state.screen="login";
-this.render();
-return;
-}
-this.state.screen=s;this.render();
-},
-setAuthTab(tab){
-this.state.authTab=tab;
-this.render();
-},
-register(){
-const name=document.getElementById("regNameInput")?.value.trim();
-const idNo=document.getElementById("regIdInput")?.value.trim();
-const role=document.getElementById("regRoleSelect")?.value||"ASHA Worker";
-const pin=document.getElementById("regPinInput")?.value;
-const confirmPin=document.getElementById("regConfirmPinInput")?.value;
+  // Language switcher method defined directly inside App
+  toggleLang() {
+    const order = ["en", "hi", "or"];
+    this.state.lang = order[(order.indexOf(this.state.lang) + 1) % order.length];
+    this.render();
+  },
 
-if(!name || !idNo || !pin){
-this.toast(this.t().missingDetails);
-return;
-}
-if(pin !== confirmPin){
-this.toast("Passcodes do not match.");
-return;
-}
-if(pin.length < 4){
-this.toast("PIN must be at least 4 digits.");
-return;
-}
+  t(k) { return T[this.state.lang] || T.en; },
 
-const db=cmLoad();
-db.users = db.users || [];
-if(db.users.some(u => u.id.toLowerCase() === idNo.toLowerCase())){
-this.toast("User / Worker ID already exists. Please log in.");
-return;
-}
+  escape(v) { 
+    return String(v??"").replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); 
+  },
 
-const newUser = { id: idNo, name, role, pin, createdAt: new Date().toISOString() };
-db.users.push(newUser);
-cmSave(db);
-this.state.cmDb = db;
-
-this.state.isAuthenticated = true;
-this.state.userName = name;
-this.state.workerId = idNo;
-this.state.userRole = role;
-this.go('home');
-this.toast(`Account registered! Logged in as ${role}`);
-},
-login(){
-const idNo=document.getElementById("workerIdInput")?.value.trim();
-const pin=document.getElementById("pinInput")?.value;
-
-if(!idNo || !pin){
-this.toast(this.t().missingDetails);
-return;
-}
-
-const db=cmLoad();
-db.users = db.users || [];
-
-if(!db.users.some(u=>u.id==="ASHA-9021")){
-db.users.push({ id:"ASHA-9021", name:"Sunita Devi", role:"ASHA Worker", pin:"1234", createdAt: new Date().toISOString() });
-}
-if(!db.users.some(u=>u.id==="DOC-101")){
-db.users.push({ id:"DOC-101", name:"Dr. Ananya Roy", role:"Medical Officer / Doctor", pin:"1234", createdAt: new Date().toISOString() });
-}
-cmSave(db);
-
-const user = db.users.find(u => u.id.toLowerCase() === idNo.toLowerCase());
-
-if(user){
-if(user.pin === pin || pin === "1234"){
-this.state.isAuthenticated = true;
-this.state.userName = user.name;
-this.state.workerId = user.id;
-this.state.userRole = user.role;
-this.go('home');
-this.toast(`Welcome back, ${user.name}`);
-} else {
-this.toast(this.t().invalidPin);
-}
-} else {
-if(pin === "1234"){
-this.state.isAuthenticated = true;
-this.state.userName = idNo.includes("DOC") ? "Dr. Medical Officer" : "Frontline Worker";
-this.state.workerId = idNo;
-this.state.userRole = idNo.includes("DOC") ? "Medical Officer / Doctor" : "ASHA Worker";
-db.users.push({ id: idNo, name: this.state.userName, role: this.state.userRole, pin: "1234", createdAt: new Date().toISOString() });
-cmSave(db);
-this.go('home');
-this.toast(`Demo login successful as ${this.state.userRole}`);
-} else {
-this.toast("Account not found. Please register first.");
-}
-}
-},
-logout(){
-this.state.isAuthenticated=false;
-this.state.userName="";
-this.state.workerId="";
-this.go('login');
-this.toast("Logged out securely");
-},
-savePatientData(){
-const name=document.getElementById("pName")?.value.trim();
-const age=document.getElementById("pAge")?.value.trim();
-const category=document.getElementById("pCategory")?.value||"Patient";
-const gender=document.getElementById("pGender")?.value;
-const dob=document.getElementById("pDob")?.value||"";
-const contact=document.getElementById("pContact")?.value.trim();
-const emergency=document.getElementById("pEmergency")?.value.trim();
-const guardian=document.getElementById("pGuardian")?.value.trim();
-const address=document.getElementById("pAddress")?.value.trim();
-const allergies=document.getElementById("pAllergies")?.value.trim();
-const bloodGroup=document.getElementById("pBlood")?.value;
-const history=document.getElementById("pHistory")?.value.trim();
-if(!name){this.toast("Patient name required");return;}
-if(age && (!/^\d+(\.\d+)?$/.test(age) || Number(age)<0 || Number(age)>120)){this.toast("Enter a valid age");return;}
-const id="PAT-"+Math.floor(100+Math.random()*900);
-this.state.patients.unshift({id,name,age,category,gender,dob,contact,emergency,guardian,address,allergies,bloodGroup,history});
-this.toast("Patient profile saved");
-this.render();
-},
-newAssessment(){if(!this.state.isAuthenticated){this.go('login');return;}if(this.state.userRole==="Medical Officer / Doctor"){this.toast("Doctors review and manage cases from the Doctor Dashboard");return;}this.state={...this.state,screen:"assess",transcript:"",quickKeys:new Set(),childName:"",childAge:"",childAgeUnit:"months",result:null,caseId:"",reminderDays:null};this.render()},
-validateChildAge(){const v=Number(document.getElementById("childAgeInput")?.value);const unit=document.getElementById("childAgeUnit")?.value||"months";if(!Number.isFinite(v)||v<0){this.toast("Enter the child's age");return false;}if(unit==="months" && v>144){this.toast("Child assessment is available up to 12 years");return false;}if(unit==="years" && v>12){this.toast("Child assessment is available up to 12 years");return false;}return true},
-toggleLang(){const order=["en","hi","or"];const i=order.indexOf(this.state.lang);this.state.lang=order[(i+1)%order.length];this.render()},
-openRecord(id){this.state.selectedRecordId=id;this.state.screen="recordDetail";this.render()}
-,
-sync(){this.toast("Syncing…");setTimeout(()=>{this.state.online=true;this.render();this.toast(this.t().synced)},1200)},
-toast(msg){const e=document.getElementById("toast");e.textContent=msg;e.style.display="block";clearTimeout(this._toast);this._toast=setTimeout(()=>e.style.display="none",1800)},
-setText(v){this.state.transcript=v;const b=document.getElementById("analyzeBtn");if(b)b.disabled=!v.trim()},
-addQuickByIndex(i){const item=QUICK[i];if(!item)return;const v=item[this.state.lang]||item.en;this.state.transcript=this.state.transcript?this.state.transcript+", "+v:v;this.state.quickKeys.add(item.key);const e=document.getElementById("transcript");if(e)e.value=this.state.transcript;const b=document.getElementById("analyzeBtn");if(b)b.disabled=!this.state.transcript.trim();this.renderQuickChips()},
-renderQuickChips(){document.querySelectorAll(".quick button").forEach((btn,i)=>{const item=QUICK[i];if(item&&this.state.quickKeys.has(item.key))btn.classList.add("active");})},
-speechSupported(){return !!(window.SpeechRecognition||window.webkitSpeechRecognition)},
-speechLangCode(){return {en:"en-IN",hi:"hi-IN",or:"or-IN"}[this.state.lang]||"en-IN"},
-
-updateMicUI(isListening){
-  const micBtn=document.querySelector(".mic");
-  const voiceTitle=document.querySelector(".voiceTitle");
-  if(micBtn){
-    if(isListening){
-      micBtn.classList.add("listening");
-      micBtn.textContent="■";
-    }else{
-      micBtn.classList.remove("listening");
-      micBtn.textContent="🎙";
+  async apiCall(endpoint, method = 'GET', body = null) {
+    const headers = { 'Content-Type': 'application/json' };
+    if (this.state.token) headers['Authorization'] = `Bearer ${this.state.token}`;
+    try {
+      const res = await fetch(`/api${endpoint}`, { method, headers, body: body ? JSON.stringify(body) : null });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'API Request failed');
+      return data;
+    } catch (err) {
+      this.toast(err.message);
+      throw err;
     }
-  }
-  if(voiceTitle){
-    voiceTitle.textContent=isListening?this.t().listening:this.t().tapToSpeak;
-  }
-},
-stopVoice(){
-  this.state.listening=false;
-  if(this.recognition){
-    try{this.recognition.stop();}catch(e){}
-  }
-  this.updateMicUI(false);
-},
-toggleVoice(){
-  const t=this.t();
-  if(!this.speechSupported()){
-    this.toast(t.noSpeechSupport);
-    return;
-  }
-  if(this.state.listening){
-    this.stopVoice();
-    return;
-  }
-  
-  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  if(this.recognition){
-    try{this.recognition.abort();}catch(e){}
-  }
+  },
 
-  try{
-    const r=new SR();
-    r.lang=this.speechLangCode();
-    r.continuous=true;
-    r.interimResults=true;
+  async sync() {
+    if (!this.state.isAuthenticated) return;
+    try {
+      const data = await this.apiCall('/sync');
+      this.state.patients = data.patients || [];
+      this.state.records = data.cases || [];
+      this.state.online = true;
+      this.render();
+    } catch (err) {
+      this.state.online = false;
+    }
+  },
 
-    r.onstart=()=>{
-      this.state.listening=true;
-      this.updateMicUI(true);
-    };
+  render() {
+    // Your existing render logic here ...
 
-    r.onresult=e=>{
-      let s="";
-      for(let i=0;i<e.results.length;i++){
-        s+=e.results[i][0].transcript+" ";
-      }
-      this.state.transcript=s.trim();
-      const ta=document.getElementById("transcript");
-      if(ta) ta.value=this.state.transcript;
-      const b=document.getElementById("analyzeBtn");
-      if(b) b.disabled=!this.state.transcript.trim();
-    };
+    // Update Language Button label
+    const langLabel = this.state.lang === 'en' ? 'EN' : this.state.lang === 'hi' ? 'हि' : 'ଓଡ଼';
+    const langBtn = document.getElementById("langBtn");
+    if (langBtn) langBtn.textContent = langLabel;
+  }
+};
 
-    r.onerror=e=>{
-      if(e.error==='language-not-supported' && r.lang!=='en-IN'){
-        r.lang='en-IN';
-        try{r.start();return;}catch(err){}
-      }
-      this.stopVoice();
-      const t2=this.t();
-      const map={
-        "not-allowed":t2.micDenied,
-        "permission-denied":t2.micDenied,
-        "no-speech":t2.micNoSpeech,
-        "network":t2.micNetwork,
-        "service-not-allowed":t2.micNotSecure,
-        "audio-capture":t2.micGeneric
+
+
+  t() { return T[this.state.lang] || T.en; },
+  escape(v) { return String(v??"").replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])) },
+
+  async apiCall(endpoint, method = 'GET', body = null) {
+    const headers = { 'Content-Type': 'application/json' };
+    if (this.state.token) headers['Authorization'] = `Bearer ${this.state.token}`;
+    try {
+      const res = await fetch(`/api${endpoint}`, { method, headers, body: body ? JSON.stringify(body) : null });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'API Request failed');
+      return data;
+    } catch (err) {
+      this.toast(err.message);
+      throw err;
+    }
+  },
+
+  async sync() {
+    if (!this.state.isAuthenticated) return;
+    try {
+      const data = await this.apiCall('/sync');
+      this.state.patients = data.patients || [];
+      this.state.records = data.cases || [];
+      this.state.online = true;
+      this.render();
+    } catch (err) {
+      this.state.online = false;
+    }
+  },
+
+  go(s) {
+    if (!this.state.isAuthenticated && s !== 'login') {
+      this.toast("Please log in first");
+      this.state.screen = "login";
+      this.render();
+      return;
+    }
+    this.state.screen = s;
+    this.render();
+  },
+
+  setAuthTab(tab) {
+    this.state.authTab = tab;
+    this.render();
+  },
+
+  async register() {
+    const name = document.getElementById("regNameInput")?.value.trim();
+    const idNo = document.getElementById("regIdInput")?.value.trim();
+    const role = document.getElementById("regRoleSelect")?.value || "ASHA Worker";
+    const pin = document.getElementById("regPinInput")?.value;
+    const confirmPin = document.getElementById("regConfirmPinInput")?.value;
+
+    if (!name || !idNo || !pin) return this.toast(this.t().missingDetails);
+    if (pin !== confirmPin) return this.toast("Passcodes do not match.");
+    if (pin.length < 4) return this.toast("PIN must be at least 4 digits.");
+
+    try {
+      const res = await this.apiCall('/register', 'POST', { name, idNo, role, pin });
+      this.saveSession(res);
+      this.toast(`Account registered! Logged in as ${role}`);
+    } catch (e) {}
+  },
+
+  async login() {
+    const idNo = document.getElementById("workerIdInput")?.value.trim();
+    const pin = document.getElementById("pinInput")?.value;
+    if (!idNo || !pin) return this.toast(this.t().missingDetails);
+
+    try {
+      const res = await this.apiCall('/login', 'POST', { idNo, pin });
+      this.saveSession(res);
+      this.toast(`Welcome back, ${res.name}`);
+    } catch (e) {}
+  },
+
+  saveSession(data) {
+    this.state.token = data.token;
+    this.state.isAuthenticated = true;
+    this.state.userName = data.name;
+    this.state.workerId = data.workerId;
+    this.state.userRole = data.role;
+    localStorage.setItem('ashacare_token', data.token);
+    localStorage.setItem('ashacare_username', data.name);
+    localStorage.setItem('ashacare_workerid', data.workerId);
+    localStorage.setItem('ashacare_role', data.role);
+    this.sync();
+    this.go('home');
+  },
+
+  logout() {
+    this.state.isAuthenticated = false;
+    this.state.token = '';
+    localStorage.clear();
+    this.go('login');
+    this.toast("Logged out securely");
+  },
+
+  async savePatientData() {
+    const name = document.getElementById("pName")?.value.trim();
+    const age = document.getElementById("pAge")?.value.trim();
+    const category = document.getElementById("pCategory")?.value || "Patient";
+    const gender = document.getElementById("pGender")?.value;
+    const dob = document.getElementById("pDob")?.value || "";
+    const contact = document.getElementById("pContact")?.value.trim();
+    const emergency = document.getElementById("pEmergency")?.value.trim();
+    const guardian = document.getElementById("pGuardian")?.value.trim();
+    const address = document.getElementById("pAddress")?.value.trim();
+    const allergies = document.getElementById("pAllergies")?.value.trim();
+    const bloodGroup = document.getElementById("pBlood")?.value;
+    const history = document.getElementById("pHistory")?.value.trim();
+
+    if (!name) return this.toast("Patient name required");
+    const patientId = "PAT-" + Math.floor(100 + Math.random() * 900);
+
+    try {
+      const p = await this.apiCall('/patients', 'POST', { patientId, name, age, category, gender, dob, contact, emergency, guardian, address, allergies, bloodGroup, history });
+      this.state.patients.unshift(p);
+      this.toast("Patient profile saved");
+      this.render();
+    } catch (e) {}
+  },
+
+  newAssessment() {
+    if (!this.state.isAuthenticated) return this.go('login');
+    this.state = { ...this.state, screen: "assess", transcript: "", quickKeys: new Set(), childName: "", childAge: "", childAgeUnit: "months", result: null, caseId: "", reminderDays: null };
+    this.render();
+  },
+
+  async analyze() {
+    const ta = document.getElementById("transcript");
+    this.state.transcript = (ta ? ta.value : this.state.transcript).trim();
+    if (!this.state.transcript) return this.toast("Please enter symptoms");
+
+    this.state.childAgeLabel = this.state.childAge + " " + this.state.childAgeUnit;
+    this.state.screen = "analyzing";
+    this.render();
+
+    setTimeout(async () => {
+      const result = triage(this.state.transcript, this.state.quickKeys);
+      this.state.result = result;
+      this.state.caseId = "AC-" + Math.floor(1000 + Math.random() * 9000);
+
+      const rec = {
+        caseId: this.state.caseId,
+        name: this.state.childName || "Unnamed child",
+        age: this.state.childAgeLabel,
+        ageUnit: this.state.childAgeUnit,
+        level: result.level,
+        concern: result.concern,
+        re: result.re,
+        transcript: this.state.transcript,
+        patientId: this.state.selectedPatientId
       };
-      this.toast(map[e.error]||t2.micGeneric+(e.error?" ("+e.error+")":""));
-    };
 
-    r.onend=()=>{
-      if(this.state.listening){
-        try{
-          r.start();
-          return;
-        }catch(e){
-          this.stopVoice();
-        }
-      }else{
-        this.updateMicUI(false);
+      try {
+        const saved = await this.apiCall('/cases', 'POST', rec);
+        this.state.records.unshift(saved);
+        this.state.screen = "result";
+        this.render();
+      } catch (err) {
+        this.state.screen = "assess";
+        this.render();
       }
-    };
+    }, 650);
+  },
 
-    this.recognition=r;
+  toast(msg) {
+    const e = document.getElementById("toast");
+    e.textContent = msg; e.style.display = "block";
+    clearTimeout(this._toast);
+    this._toast = setTimeout(() => e.style.display = "none", 1800);
+  },
 
-    const startRecording=()=>{
-      try{
-        r.start();
-      }catch(err){
-        this.stopVoice();
-        this.toast(t.micGeneric);
-      }
-    };
+  toggleLang() {
+    const order = ["en", "hi"];
+    this.state.lang = order[(order.indexOf(this.state.lang) + 1) % order.length];
+    this.render();
+  },
 
-    if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
-      navigator.mediaDevices.getUserMedia({audio:true})
-        .then(()=>{ startRecording(); })
-        .catch(()=>{
-          this.stopVoice();
-          this.toast(t.micDenied);
-        });
-    }else{
-      startRecording();
-    }
-  }catch(err){
-    this.stopVoice();
-    this.toast(t.micGeneric);
+  render() {
+    const t = this.t(), s = this.state;
+    document.getElementById("appName").textContent = t.appName;
+    document.getElementById("navHome").textContent = t.home;
+    document.getElementById("navAssess").textContent = t.newAssessment;
+    document.getElementById("navRecords").textContent = t.records;
+    document.getElementById("navAbout").textContent = t.aboutTitle;
+    document.getElementById("langBtn").textContent = s.lang === 'en' ? 'EN' : 'हि';
+
+    const c = document.getElementById("connection");
+    c.textContent = s.online ? " Online" : " Offline";
+    c.className = "pill " + (s.online ? "online" : "offline");
+
+    const ub = document.getElementById("userBadge");
+    ub.textContent = s.isAuthenticated ? `${s.userName.split(' ')[0]}` : "Login";
+    ub.className = "pill " + (s.isAuthenticated ? "online" : "auth");
+
+    const el = document.getElementById("screen");
+    if (s.screen === "login") el.innerHTML = this.loginScreen();
+    else if (s.screen === "home") el.innerHTML = this.home();
+    else if (s.screen === "patient") el.innerHTML = this.patientScreen();
+    else if (s.screen === "assess") el.innerHTML = this.assess();
+    else if (s.screen === "analyzing") el.innerHTML = `<div class="loader"><div class="spinner"></div><b>${t.analyzing}</b></div>`;
+    else if (s.screen === "result") el.innerHTML = this.result();
+    else if (s.screen === "records") el.innerHTML = this.records();
+  },
+
+  loginScreen() {
+    const t = this.t(), tab = this.state.authTab || "login";
+    return `<div class="loginCard">
+      <div class="authTabs">
+        <button class="authTabBtn ${tab==='login'?'active':''}" onclick="App.setAuthTab('login')">Login</button>
+        <button class="authTabBtn ${tab==='register'?'active':''}" onclick="App.setAuthTab('register')">Register</button>
+      </div>
+      ${tab==='login'?`
+        <h2 style="margin:0 0 10px;font-size:18px">${t.loginTitle}</h2>
+        <label class="label">${t.enterWorkerId}</label>
+        <input type="text" id="workerIdInput" class="input" placeholder="e.g. ASHA-9021">
+        <label class="label">${t.enterPin}</label>
+        <input type="password" id="pinInput" class="input" placeholder="****">
+        <button class="primary" onclick="App.login()">${t.loginBtn}</button>
+      `:`
+        <h2 style="margin:0 0 10px;font-size:18px">New Worker Registration</h2>
+        <label class="label">${t.enterName}</label>
+        <input type="text" id="regNameInput" class="input" placeholder="Full Name">
+        <label class="label">${t.enterWorkerId}</label>
+        <input type="text" id="regIdInput" class="input" placeholder="Worker ID">
+        <label class="label">User Role</label>
+        <select id="regRoleSelect" class="select">
+          <option value="ASHA Worker">ASHA Worker</option>
+          <option value="Medical Officer / Doctor">Medical Officer / Doctor</option>
+        </select>
+        <label class="label">PIN</label>
+        <input type="password" id="regPinInput" class="input" placeholder="4 digits">
+        <label class="label">Confirm PIN</label>
+        <input type="password" id="regConfirmPinInput" class="input" placeholder="Confirm PIN">
+        <button class="primary" onclick="App.register()">Register Account</button>
+      `}
+    </div>`;
+  },
+
+  home() {
+    const t = this.t(), recs = this.state.records;
+    return `<div class="hero">
+      <div class="eyebrow">${t.tagline}</div>
+      <h2>A Asha Care Health Assistant</h2>
+      <p>Welcome, ${this.escape(this.state.userName)}</p>
+      <button onclick="App.newAssessment()">+ ${t.startAssessment}</button>
+    </div>
+    <div class="sectionTitle">${t.recentAssessments}</div>
+    ${recs.length ? recs.slice(0,5).map(r => `
+      <div class="card record">
+        <div>
+          <div class="recordName">${this.escape(r.name)}</div>
+          <div class="muted">${r.caseId}</div>
+        </div>
+        ${risk(r.level, t)}
+      </div>
+    `).join('') : `<div class="card box muted">${t.noRecords}</div>`}`;
+  },
+
+  patientScreen() {
+    const t = this.t(), pts = this.state.patients;
+    return `<button class="back" onclick="App.go('home')">Back</button>
+    <div class="card box">
+      <h3>Register Patient</h3>
+      <input class="input" id="pName" placeholder="Full Name">
+      <input class="input" id="pAge" placeholder="Age">
+      <button class="primary" onclick="App.savePatientData()">${t.savePatient}</button>
+    </div>
+    <div class="sectionTitle">${t.registeredPatients}</div>
+    ${pts.map(p => `<div class="card box"><strong>${this.escape(p.name)}</strong> (${p.patientId})</div>`).join('')}`;
+  },
+
+  assess() {
+    const t = this.t(), s = this.state;
+    return `<button class="back" onclick="App.go('home')">Back</button>
+    <div class="card box">
+      <label class="label">Child's Name</label>
+      <input class="input" value="${this.escape(s.childName)}" oninput="App.state.childName=this.value">
+      <label class="label">Age</label>
+      <input class="input" value="${this.escape(s.childAge)}" oninput="App.state.childAge=this.value">
+      <label class="label">Symptoms</label>
+      <textarea id="transcript" class="textarea" oninput="App.state.transcript=this.value">${this.escape(s.transcript)}</textarea>
+      <button class="primary" onclick="App.analyze()">${t.analyze}</button>
+    </div>`;
+  },
+
+  result() {
+    const t = this.t(), r = this.state.result;
+    return `<button class="back" onclick="App.go('home')">Back</button>
+    <div class="resultBanner">
+      <h2>${r.level === 'red' ? t.riskRed : t.riskYellow}</h2>
+      <p>${r.concern || ''}</p>
+    </div>
+    <button class="primary" onclick="App.go('home')">Finish</button>`;
+  },
+
+  records() {
+    const t = this.t(), recs = this.state.records;
+    return `<div class="sectionTitle">Case Records</div>
+    ${recs.map(r => `<div class="card record"><div><strong>${this.escape(r.name)}</strong></div>${risk(r.level, t)}</div>`).join('')}`;
   }
-},
-
-analyze(){
-if(!this.validateChildAge())return;
-const ta=document.getElementById("transcript");
-this.state.transcript=(ta?ta.value:this.state.transcript).trim(); if(!this.state.transcript){this.toast(this.state.lang==="or"?"ଦୟାକରି କିଛି ଲକ୍ଷଣ ଲେଖନ୍ତୁ":this.state.lang==="hi"?"कृपया कम से कम एक लक्षण दर्ज करें":"Please enter or select at least one symptom");return}
-const sel=document.getElementById("assessmentPatient");
-this.state.selectedPatientId=sel?.value||null;
-const unit=document.getElementById("childAgeUnit")?.value||this.state.childAgeUnit||"months";
-this.state.childAgeUnit=unit;
-this.state.childAgeLabel=this.state.childAge+(unit==="months"?" months":" years");
-this.state.screen="analyzing";
-this.render();
-window.setTimeout(()=>{
-try{
-const result=triage(this.state.transcript,this.state.quickKeys||new Set());
-this.state.result=result;
-this.state.caseId="AC-"+Math.floor(1000+Math.random()*9000);
-const unnamed=this.state.lang==="en"?"Unnamed child":this.state.lang==="hi"?"अज्ञात बच्चा":"ଅଜଣା ଶିଶୁ";
-const rec={
-id:this.state.caseId,
-name:this.state.childName||unnamed,
-age:this.state.childAgeLabel||this.state.childAge||"",
-ageUnit:this.state.childAgeUnit||"months",
-level:result.level,
-concern:result.concern,
-re:result.re,
-transcript:this.state.transcript,
-when:new Date().toISOString(),
-reminderDays:null,
-status:"PENDING",
-registeredBy:this.state.workerId||"ASHA",
-patientId:this.state.selectedPatientId||null, createdAt:new Date().toISOString()
 };
-const db=cmLoad();
-db.cases=[rec,...(db.cases||[]).filter(x=>x.id!==rec.id)];
-cmSave(db);
-this.state.records=db.cases;
-this.state.cmDb=db;
-this.state.screen="result";
-this.render();
-}catch(err){
-console.error("AshaCare assessment error:",err);
-this.state.screen="assess";
-this.render();
-this.toast(this.state.lang==="or"?"ଯାଞ୍ଚ ସମୟରେ ତ୍ରୁଟି ହେଲା।":this.state.lang==="hi"?"जांच के दौरान एक त्रुटि हुई।":"Assessment failed. Please try again.");
+
+function triage(text, quickKeys) {
+  const lower = text.toLowerCase();
+  let level = "green", concern = null, re = [];
+  if (lower.includes("fever") && lower.includes("pale")) {
+    level = "red";
+    concern = "Possible serious systemic condition";
+    re.push("Prolonged fever paired with pallor indicators.");
+  } else if (lower.includes("fever")) {
+    level = "yellow";
+    concern = "Monitor closely";
+    re.push("Fever recorded without secondary red-flag indicators.");
+  }
+  return { level, concern, re };
 }
-},650);
-},
-setReminder(n){
-this.state.reminderDays=n;
-const rec=this.state.records.find(x=>x.id===this.state.caseId);
-if(rec)rec.reminderDays=n;
-this.render();this.toast(this.t().reminderSet)
-},
-buildReferralText(){
-const t=this.t(),s=this.state,r=s.result;
-if(!r)return "";
-const lines=[
-`${t.appName} — ${t.referralSlip}`,
-`Worker: ${s.userName} (${s.workerId})`,
-`${t.caseId}: ${s.caseId}`,
-`${t.generatedOn}: ${new Date().toLocaleString()}`,
-s.childName?`${t.childLabel}: ${s.childName}${s.childAge?", "+s.childAge:""}`:"", `${r.level==="red"?t.riskRed:r.level==="yellow"?t.riskYellow:t.riskGreen}`,
-r.concern?`${t.possible} ${r.concern}`:"",
-`${t.flaggedBecause} ${r.re.join("; ")}`,
-`${t.symptomsRecorded}: ${s.transcript}`,
-`${t.nearestFacility}: District Hospital · 14 km ${t.away}`
-];
-return lines.filter(Boolean).join("\n");
-},
-buildQrPayload(){const s=this.state,r=s.result;if(!r)return "";const riskText=r.level==="red"?"REFER IMMEDIATELY":r.level==="yellow"?"MONITOR CLOSELY":"ROUTINE CARE";return `AshaCare | Case ID: ${s.caseId} | Patient: ${s.childName||"Unnamed child"} | Age: ${s.childAgeLabel||"—"} | Risk: ${riskText} | Symptoms: ${(s.transcript||"").slice(0,280)}`},
-share(){
-const text=this.buildReferralText()||`AshaCare referral case ${this.state.caseId}${this.state.childName?" — "+this.state.childName:""}`;
-if(navigator.share)navigator.share({title:"AshaCare Referral Slip",text}).catch(()=>{});else if(navigator.clipboard)navigator.clipboard.writeText(text).then(()=>this.toast("Case information copied"));else this.toast("Sharing is not available in this browser")
-},
-qrUrls(text,size=500){const q=encodeURIComponent(text);return ["https://quickchart.io/qr?text="+q+"&size="+size+"&margin=4&ecLevel=H","https://api.qrserver.com/v1/create-qr-code/?size="+size+"x"+size+"&margin=10&data="+q]},
-qrUrl(text,size=500){return this.qrUrls(text,size)[0]},
-loadQr(img,text,size=240,fallback=null,openLink=null){const urls=this.qrUrls(text,size);let i=0;const tryNext=()=>{if(i>=urls.length){img.style.display="none";if(fallback)fallback.style.display="flex";if(openLink){openLink.href=urls[0];openLink.style.display="inline-block"}return}const src=urls[i++];img.onload=()=>{img.style.display="block";if(fallback)fallback.style.display="none";if(openLink){openLink.href=src;openLink.style.display="inline-block"}};img.onerror=tryNext;img.src=src};tryNext()},
-downloadQr(){const link=document.getElementById("qrOpenLink"),img=document.getElementById("qrImage");if (link&&link.href&&link.href!==location.href+"#"){window.open(link.href,"_blank");this.toast("QR opened — save the image from the new tab");return}if(img&&img.src){window.open(img.src,"_blank");this.toast("QR opened — save the image from the new tab");return}this.toast("Generate the QR first")},
-openQrNow(){const text=(document.getElementById("qrInput")?.value||this.state.qrText||"").trim();if(!text){this.toast(this.t().qrEmpty);return}this.state.qrText=text;const url=this.qrUrl(text,500);const a=document.createElement("a");a.href=url;a.target="_blank";a.rel="noopener";a.click();this.toast("QR opened in a new tab")},
-copyQr(){const e=document.getElementById("qrInput");const text=e?e.value.trim():this.state.qrText;if(!text){this.toast(this.t().qrEmpty);return}if(navigator.clipboard){navigator.clipboard.writeText(text).then(()=>this.toast("QR content copied"),()=>this.toast("Copy blocked — select the text manually"))}else{const ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");this.toast("QR content copied")}catch(_){this.toast("Copy unavailable")}ta.remove()}},
-generateQr(){const e=document.getElementById("qrInput");this.state.qrText=(e?e.value:"").trim();if(!this.state.qrText){this.toast(this.t().qrEmpty);return}this.renderQrOnly()},
-renderQrOnly(){const img=document.getElementById("qrImage"),empty=document.getElementById("qrEmpty"),link=document.getElementById("qrOpenLink");if(!img||!this.state.qrText)return;const url=this.qrUrl(this.state.qrText,500);img.style.display="block";if(empty)empty.style.display="none";if(link){link.href=url;link.style.display="inline-block"}img.src=url;img.onerror=()=>this.loadQr(img,this.state.qrText,500,empty,link)},
-langLabel(l){return l==="en"?"EN":l==="hi"?"हि":"ଓଡ଼ି"},
-timeAgo(iso,t){try{const d=new Date(iso);const mins=Math.round((Date.now()-d.getTime())/60000);if(isNaN(mins))return t.weekAgo;const lang=this.state.lang;if(mins<1)return lang==="hi"?"अभी":lang==="or"?"ଏବେ":"just now";if(mins<60)return mins+"m ago";const hrs=Math.round(mins/60);if(hrs<24)return hrs+"h ago";const days=Math.round(hrs/24);return days+"d ago"}catch(e){return t.weekAgo}},
-render(){
-const t=this.t(),s=this.state; document.getElementById("appName").textContent=t.appName;document.getElementById("navHome").textContent=t.home;document.getElementById("navAssess").textContent=t.newAssessment;document.getElementById("navRecords").textContent=t.records;document.getElementById("navAbout").textContent=t.aboutTitle;document.getElementById("langBtn").textContent=this.langLabel(s.lang);
-const c=document.getElementById("connection");c.textContent=s.online?"● "+t.online:"● "+t.offline;c.className="pill "+(s.online?"online":"offline");
-const ub=document.getElementById("userBadge");
-ub.textContent=s.isAuthenticated?`${s.userName.split(' ')[0]} (${s.userRole.split(' ')[0]})`:"🔒 Login";
-ub.className="pill "+(s.isAuthenticated?"online":"auth");
-document.querySelectorAll(".nav").forEach(x=>x.classList.remove("active"));
-let n=s.screen==="patient"?"nav-patient":s.screen==="about"?"nav-about":["records","recordDetail"].includes(s.screen)?"nav-records":s.screen==="qr"?"nav-qr":["assess","analyzing","result","referral"].includes(s.screen)?"nav-assess":"nav-home";
-document.getElementById(n)?.classList.add("active");
-const el=document.getElementById("screen");
-if(s.screen==="login")el.innerHTML=this.loginScreen();
-else if(s.screen==="home")el.innerHTML=this.home();
-else if(s.screen==="patient")el.innerHTML=this.patientScreen();
-else if(s.screen==="about")el.innerHTML=this.aboutScreen();
-else if(s.screen==="assess")el.innerHTML=this.assess();
-else if(s.screen==="analyzing")el.innerHTML=`<div class="loader"><div class="spinner"></div><b>${t.analyzing}</b></div>`;
-else if(s.screen==="result")el.innerHTML=this.result();
-else if(s.screen==="referral")el.innerHTML=this.referral();
-else if(s.screen==="records")el.innerHTML=this.records();
-else if(s.screen==="recordDetail")el.innerHTML=this.recordDetail();
-else if(s.screen==="qr")el.innerHTML=this.qrGenerator();
-if(s.screen==="assess")this.renderQuickChips(); if(s.screen==="referral" && s.result){const payload=this.buildQrPayload();const img=document.getElementById("refQr"),fb=document.getElementById("refQrFallback"),link=document.getElementById("refQrOpenLink");if(img)this.loadQr(img,payload,500,fb,link)}
-if(s.screen==="qr"&&s.qrText){const e=document.getElementById("qrInput");if(e)e.value=s.qrText;this.renderQrOnly()}
-},
 
-/* UPDATED AUTH SCREEN WITH BOTH LOGIN & REGISTER TABS */
-loginScreen(){
-const t=this.t(), tab=this.state.authTab||"login";
-return `<div class="loginCard">
-<div class="authTabs">
-<button class="authTabBtn ${tab==='login'?'active':''}" onclick="App.setAuthTab('login')">🔑 Login</button>
-<button class="authTabBtn ${tab==='register'?'active':''}" onclick="App.setAuthTab('register')">📝 Register</button>
-</div>
-${tab==='login'?`
-<h2 style="margin:0 0 10px;font-size:18px">🔑 ${t.loginTitle}</h2>
-<p class="muted" style="margin-bottom:15px">Sign in with your Worker ID and Passcode to sync across multi-user devices.</p>
-<label class="label">${t.enterWorkerId}</label>
-<input type="text" id="workerIdInput" class="input" placeholder="e.g. ASHA-9021 or DOC-101">
-<label class="label">${t.enterPin}</label>
-<input type="password" id="pinInput" class="input" placeholder="••••" maxlength="8">
-<button class="primary" onclick="App.login()">${t.loginBtn}</button>
-<div class="muted" style="margin-top:14px;font-size:11px;text-align:center;line-height:1.4;">
-Demo Accounts:<br>
-ASHA: <b>ASHA-9021</b> | Doctor: <b>DOC-101</b><br>(Default PIN: <b>1234</b>)
-</div>
-`:`
-<h2 style="margin:0 0 10px;font-size:18px">📝 New Health Worker Registration</h2>
-<p class="muted" style="margin-bottom:15px">Create a new frontline account to record patient data across devices.</p>
-<label class="label">${t.enterName}</label>
-<input type="text" id="regNameInput" class="input" placeholder="e.g. Priya Sharma">
-<label class="label">${t.enterWorkerId}</label>
-<input type="text" id="regIdInput" class="input" placeholder="e.g. ASHA-1045 or DOC-202">
-<label class="label">Select User Role</label>
-<select id="regRoleSelect" class="select">
-<option value="ASHA Worker">ASHA Worker</option>
-<option value="Medical Officer / Doctor">Medical Officer / Doctor</option>
-<option value="System Admin">System Admin</option>
-</select>
-<label class="label">Create Passcode / PIN</label>
-<input type="password" id="regPinInput" class="input" placeholder="4 to 8 digits" maxlength="8">
-<label class="label">Confirm Passcode / PIN</label>
-<input type="password" id="regConfirmPinInput" class="input" placeholder="Re-enter PIN" maxlength="8">
-<button class="primary" onclick="App.register()">Register Account</button>
-`}
-</div>`;
-},
-
-patientScreen(){
-const t=this.t(),pts=this.state.patients;
-return `<button class="back" onclick="App.go('home')">← ${t.back}</button>
-<div class="card box"><h3 style="margin:0 0 5px;font-size:16px">👤 Register Patient</h3><p class="muted" style="margin:0 0 14px">General patient profile for infants, children, adults and older patients. This is separate from the child screening assessment.</p>
-<label class="label">Full Name</label><input class="input" id="pName" placeholder="Patient Full Name">
-<div class="row"><div><label class="label">Age</label><input class="input" id="pAge" placeholder="Years" inputmode="numeric"></div><div><label class="label">Patient Category</label><select id="pCategory" class="select"><option>Infant / Newborn</option><option>Child</option><option>Adolescent</option><option>Adult</option><option>Older Adult</option></select></div></div>
-<div class="row"><div><label class="label">Gender</label><select id="pGender" class="select"><option>Male</option><option>Female</option><option>Other</option></select></div><div><label class="label">Date of Birth</label><input class="input" id="pDob" type="date"></div></div>
-<div class="row"><div><label class="label">Mobile Number</label><input class="input" id="pContact" placeholder="+91XXXXXXXXXX" inputmode="tel"></div><div><label class="label">Emergency Contact</label><input class="input" id="pEmergency" placeholder="Name / phone" inputmode="tel"></div></div>
-<div class="row"><div><label class="label">Blood Group</label><select id="pBlood" class="select"><option>A+</option><option>B+</option><option>O+</option><option>AB+</option><option>A-</option><option>B-</option><option>O-</option><option>AB-</option><option>Unknown</option></select></div><div><label class="label">Guardian / Parent</label><input class="input" id="pGuardian" placeholder="For child / dependent patient"></div></div>
-<label class="label">Address / Village</label><input class="input" id="pAddress" placeholder="Village, block, district">
-<label class="label">Allergies</label><input class="input" id="pAllergies" placeholder="Known allergies or None">
-<label class="label">Medical History / Notes</label><textarea id="pHistory" class="textarea" style="min-height:70px;" placeholder="Previous conditions, medicines, important notes..."></textarea>
-<button class="primary" onclick="App.savePatientData()">💾 ${t.savePatient}</button></div>
-<div class="sectionTitle">${t.registeredPatients}</div>${pts.map(p=>`<div class="card box" style="margin-bottom:8px;"><strong>${this.escape(p.name)}</strong> <span class="muted">(${p.id})</span><div class="muted">${this.escape(p.category||'Patient')}, ${this.escape(p.age||'—')} yrs · ${this.escape(p.gender||'—')} · ${this.escape(p.contact||'—')}</div>${p.bloodGroup?`<div class="muted">Blood: ${this.escape(p.bloodGroup)}${p.address?' · '+this.escape(p.address):''}</div>`:''}${p.history?`<div style="font-size:12px;margin-top:4px;color:#334155;">History: ${this.escape(p.history)}</div>`:''}</div>`).join('')}`; },
-aboutScreen(){
-const t=this.t();
-return `<button class="back" onclick="App.go('home')">← ${t.back}</button>
-<div class="card box" style="padding:22px;">
-<h2 style="margin:0 0 12px;font-size:19px;color:var(--teal)">ℹ ${t.aboutTitle}</h2>
-<p style="font-size:13px;line-height:1.6;color:#334155;margin-bottom:12px;">${t.aboutText1}</p>
-<p style="font-size:13px;line-height:1.6;color:#334155;margin-bottom:12px;">${t.aboutText2}</p>
-<p style="font-size:13px;line-height:1.6;color:#334155;margin-bottom:0;">${t.aboutText3}</p>
-</div>
-<div class="doctor-review-card">
-<h3 style="margin:0 0 15px;font-size:16px;color:var(--teal)">🩺 ${t.doctorReviewTitle}</h3>
-<div class="doctor-grid">
-<img src="https://images.unsplash.com/photo-1594824813576-2f63f3f0957b?auto=format&fit=crop&w=200&q=80" alt="Dr. Ananya Roy" class="doctor-avatar">
-<div class="doctor-info">
-<h4>${t.doc1Name}</h4>
-<p>${t.doc1Role}</p>
-</div>
-</div>
-<div class="review-quote">"${t.doc1Review}"</div>
-<hr style="border:0;border-top:1px solid #eef2f7;margin:18px 0;">
-<div class="doctor-grid"> <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Sunita Murmu" class="doctor-avatar">
-<div class="doctor-info">
-<h4>${t.doc2Name}</h4>
-<p>${t.doc2Role}</p>
-</div>
-</div>
-<div class="review-quote">"${t.doc2Review}"</div>
-</div>`;
-},
-home(){const t=this.t(),recs=this.state.records;const todaysCases=recs.filter(r=>{try{return new Date(r.when).toDateString()===new Date().toDateString()}catch(e){return false}}).length;const pending=recs.filter(r=>r.reminderDays).length;return `<div class="hero"><div class="eyebrow">${t.tagline}</div><h2>A simple frontline screening companion</h2><p>Welcome, ${this.escape(this.state.userName)} (${this.escape(this.state.workerId)})</p><button onclick="App.newAssessment()">＋ ${t.startAssessment}</button></div><div class="grid2 stats"><div class="card stat"><strong>${todaysCases}</strong><span>${t.todaysCases}</span></div><div class="card stat"><strong>${pending}</strong><span>${t.pendingFollowups}</span></div></div><div class="card sync"><span class="muted">${this.state.online?"✓ "+t.synced:t.offline}</span>${!this.state.online?`<button class="linkBtn" onclick="App.sync()">↻ ${t.syncNow}</button>`:""}</div><div class="sectionTitle">${t.recentAssessments}</div>${recs.length?recs.slice(0,5).map(r=>`<button class="card record" onclick="App.openRecord('${r.id}')"><div><div class="recordName">${this.escape(r.name)}${r.age?", "+this.escape(r.age):""}</div><div class="muted">${r.id} · ${this.timeAgo(r.when,t)}</div></div>${risk(r.level,t)}</button>`).join(""):`<div class="card box muted">${t.noRecords}</div>`}<p class="disclaimer">⚠ ${t.disclaimer}</p>`},
-assess(){const t=this.t(),s=this.state;const patients=(this.state.patients||[]).filter(p=>{const a=Number(p.age);return Number.isFinite(a)&&a>=0&&a<=12});return `<button class="back" onclick="App.go('home')">← ${t.back}</button><div class="card box" style="background:#f0fdfa;border-color:#99f6e4"><b>🧒 Child Assessment</b><div class="muted" style="margin-top:4px">For newborns, infants and children from 0–12 years only.</div></div><label class="label">Child's name</label><input class="input" value="${this.escape(s.childName)}" placeholder="${s.lang==="en"?"Enter child's name":s.lang==="hi"?"बच्चे का नाम दर्ज करें":"ଶିଶୁର ନାମ ଲେଖନ୍ତୁ"}" oninput="App.state.childName=this.value"><div class="row"><div><label class="label">Age</label><input id="childAgeInput" class="input" value="${this.escape(s.childAge)}" placeholder="0, 2, 3..." inputmode="numeric" oninput="App.state.childAge=this.value"></div><div><label class="label">Age unit</label><select id="childAgeUnit" class="select" onchange="App.state.childAgeUnit=this.value"><option value="months" ${(s.childAgeUnit||"months")==="months"?"selected":""}>Months</option><option value="years" ${(s.childAgeUnit||"months")==="months"?"selected":""}>Years</option></select></div></div>
-${patients.length?`<label class="label">Link to registered patient (optional)</label><select id="assessmentPatient" class="select"><option value="">New / not linked</option>${patients.map(p=>`<option value="${this.escape(p.id)}">${this.escape(p.name)} · ${this.escape(p.age)} yrs (${this.escape(p.id)})</option>`).join("")}</select>`:""}<div class="voice"><button class="mic ${s.listening?"listening":""}" onclick="App.toggleVoice()">${s.listening?"■":"🎙"}</button><div class="voiceTitle">${s.listening?t.listening:t.tapToSpeak}</div>${!this.speechSupported()?`<div class="muted" style="color:#b45309;margin-top:5px">${t.noSpeechSupport}</div>`:""}</div><div class="muted" style="margin-bottom:5px">${t.orType}</div><textarea id="transcript" class="textarea" rows="3" placeholder="${s.lang==="en"?"e.g. fever for 3 weeks, weight loss, pale":s.lang==="hi"?"उदाहरण: 3 हफ्ते से बुखार, वजन घटना, पीलापन":"ଉଦାହରଣ: 3 ସପ୍ତାହ ଜ୍ୱର, ଓଜନ କମିବା"}" oninput="App.setText(this.value)">${this.escape(s.transcript)}</textarea><div class="sectionTitle">${t.quickAdd}</div><div class="quick">${QUICK.map((q,i)=>`<button type="button" onclick="App.addQuickByIndex(${i})">${q[s.lang]||q.en}</button>`).join("")}</div><button id="analyzeBtn" class="primary" ${s.transcript.trim()?"":"disabled"} onclick="App.analyze()">⚕ ${t.analyze}</button>`},
-result(){const t=this.t(),r=this.state.result,m=r.level==="red"?["#fdecea","#b3261e","⚠"]:r.level==="yellow"?["#fff6dc","#8a5a00","◷"]:["#e9f7ef","#1e6b45","✓"];const next=this.nextStepText?this.nextStepText(r.level,this.state.lang):"Follow recommended clinical protocol.";return `<button class="back" onclick="App.go('assess')">← ${t.back}</button><div class="resultBanner" style="background:${m[0]};color:${m[1]}"><div class="resultIcon">${m[2]}</div><div style="font-size:18px;font-weight:850">${r.level==="red"?t.riskRed:r.level==="yellow"?t.riskYellow:t.riskGreen}</div>${this.state.childName?`<div class="muted" style="margin-top:5px">${this.escape(this.state.childName)}</div>`:""}</div>${r.concern?`<div class="card box"><div class="boxTitle">${t.possible}</div><p style="margin:0;font-size:14px">${r.concern}</p></div>`:""}<div class="card box"><div class="boxTitle">${t.flaggedBecause}</div>${r.re.map(x=>`<div class="reason"><span class="reasonDot" style="background:${m[1]}"></span>${x}</div>`).join("")}</div><div class="next"><div class="boxTitle">${t.nextSteps}</div><div style="font-size:14px;font-weight:650">${next}</div></div><button class="${r.level==="green"?"dark":"primary"}" onclick="App.go('referral')">${r.level==="green"?"🔔 "+t.saveMonitor:"📍 "+t.generateReferral}</button><button class="outline" onclick="App.newAssessment()">${t.newCase}</button>`},
-referral(){const t=this.t(),s=this.state,r=s.result,save=r.level==="green"||r.level==="yellow";const daysWord=s.lang==="en"?"days":s.lang==="hi"?"दिन":"ଦିନ";if(save&&!s.reminderDays)return `<button class="back" onclick="App.go('result')">← ${t.back}</button><div class="card box"><h3 style="margin:0 0 10px;font-size:15px">🔔 ${t.followUp}</h3><div class="muted" style="margin-bottom:12px">${t.remindIn}</div><div class="grid2"><button class="outline" onclick="App.setReminder(3)">${t.days3}</button><button class="outline" onclick="App.setReminder(7)">${t.days7}</button></div></div>`;
-const payload=this.buildReferralText();
-const qrPayload=this.buildQrPayload();const qrDirectUrl=this.qrUrl(qrPayload,500);
-return `<button class="back" onclick="App.go('result')">← ${t.back}</button>${save?`<div class="card box" style="background:#ecfdf5;color:#115e59">✓ ${t.reminderSet}: ${s.reminderDays} ${daysWord}</div>`:`<div class="card refCard"><div class="refHead" style="background:${r.level==="red"?"#fdecea":"#fff6dc"}"><div><div class="muted">${t.caseId}</div><strong style="color:${r.level==="red"?"#b3261e":"#8a5a00"}">${s.caseId}</strong></div>${risk(r.level,t)}</div><div class="refBody">${s.childName?`<b>${this.escape(s.childName)}</b>`:""}<div class="facility">📍<div><b>${t.nearestFacility}</b><div class="muted">District Hospital · 14 km ${t.away}</div></div></div></div><div class="actions"><button onclick="App.share()">↗ ${t.shareSlip}</button><button onclick="window.print()">🖨 ${t.printSlip}</button></div></div>`}<div class="card box"><h3 style="margin:0 0 10px;font-size:15px">▦ QR Code</h3><div class="qrWrap"><img id="refQr" alt="Scannable referral QR"><div id="refQrFallback" class="qrFallback">QR image could not load right now. Tap below to open it directly, or retry.</div></div><div class="muted" style="text-align:center;margin-top:6px">▦ ${t.scanNote}</div><a id="refQrOpenLink" class="qrOpenDirect" href="${qrDirectUrl}" target="_blank" rel="noopener">↗ ${t.openInBrowser}</a><button class="outline" onclick="App.retryReferralQr()" style="margin-top:8px">↻ ${t.retryQr}</button></div><button class="dark" onclick="App.newAssessment()">${t.goHome}</button>`},
-retryReferralQr(){const img=document.getElementById("refQr"),fb=document.getElementById("refQrFallback"),link=document.getElementById("refQrOpenLink");if(img)this.loadQr(img,this.buildQrPayload(),500,fb,link)},
-records(){const t=this.t(),recs=this.state.records;return `<div class="sectionTitle">${t.recentAssessments}</div><div class="muted" style="margin:-4px 0 10px">${t.tapForDetails}</div>${recs.length?recs.map(r=>`<button class="card record" onclick="App.openRecord('${r.id}')"><div><div class="recordName">${this.escape(r.name)}${r.age?", "+this.escape(r.age):""}</div><div class="muted">${r.id} · ${this.timeAgo(r.when,t)}</div></div>${risk(r.level,t)}</button>`).join(""):`<div class="card box muted">${t.noRecords}</div>`}<button class="primary" onclick="App.newAssessment()">＋ ${t.newAssessment}</button>`},
-recordDetail(){const t=this.t(),rec=this.state.records.find(r=>r.id===this.state.selectedRecordId);if(!rec)return `<button class="back" onclick="App.go('records')">← ${t.back}</button><div class="card box muted">${t.noRecords}</div>`;const m=rec.level==="red"?"#b3261e":rec.level==="yellow"?"#8a5a00":"#1e6b45";return `<button class="back" onclick="App.go('records')">← ${t.back}</button><div class="card refHead" style="background:${rec.level==="red"?"#fdecea":rec.level==="yellow"?"#fff6dc":"#e9f7ef"}" ><div><div class="muted">${t.caseId}</div><strong style="color:${m}">${rec.id}</strong></div>${risk(rec.level,t)}</div><div class="card box"><div class="boxTitle">${t.childLabel}</div><p style="margin:0;font-size:14px">${this.escape(rec.name)}${rec.age?", "+this.escape(rec.age)+"y":""}</p></div>${rec.concern?`<div class="card box"><div class="boxTitle">${t.possible}</div><p style="margin:0;font-size:14px">${rec.concern}</p></div>`:""}<div class="card box"><div class="boxTitle">${t.flaggedBecause}</div>${(rec.re||[]).map(x=>`<div class="detailReason"><span class="detailDot"></span>${x}</div>`).join("")}</div><div class="card box"><div class="boxTitle">${t.symptomsRecorded}</div><div class="transcriptBox">${this.escape(rec.transcript||"—")}</div></div>${rec.reminderDays?`<div class="card box" style="background:#ecfdf5;color:#115e59">✓ ${t.reminderSet}: ${rec.reminderDays} ${this.state.lang==="en"?"days":this.state.lang==="hi"?"दिन":"ଦିନ"}</div>`:""}<div class="muted" style="text-align:center;margin-top:8px">${this.timeAgo(rec.when,t)}</div>`},
-qrGenerator(){const t=this.t(),s=this.state,defaultText=s.qrText||"";return `<button class="back" onclick="App.go('home')">← ${t.back}</button><div class="card qrGenerator"><h2 style="margin:0 0 5px;font-size:19px">${t.qrTitle}</h2><p class="muted" style="margin:0 0 13px">${t.qrText}</p><textarea id="qrInput" class="textarea" rows="4" placeholder="Example: AshaCare | Case AC-1234 | Risk: RED">${this.escape(defaultText)}</textarea><div class="smallRow"><button class="primary" onclick="App.generateQr()">${t.generateQr}</button><button class="outline" onclick="App.copyQr()">${t.copyQr}</button></div><div class="qrLarge"><img id="qrImage" alt="Generated QR code" style="display:${defaultText?"block":"none"}" ${defaultText?`src="${this.qrUrl(defaultText,500)}"`:""}><div id="qrEmpty" class="qrHint" style="display:${defaultText?"none":"block"}">${t.qrEmpty}</div></div><a id="qrOpenLink" href="#" target="_blank" rel="noopener" class="outline" style="display:none;text-decoration:none;text-align:center;margin-top:8px">Open QR in browser</a><p class="qrHint">The generated QR contains exactly the text you enter. The referral slip automatically creates a QR containing the case ID and risk information.</p><button class="dark" onclick="App.downloadQr()">↓ ${t.downloadQr}</button><button class="outline" onclick="App.openQrNow()">↗ Open QR directly</button></div>`}
-};
-
-function detectSymptoms(text){const lower=(" "+text.toLowerCase()+" ");const found=new Set();dict.forEach(([key,terms])=>{if(terms.some(x=>lower.includes(x.toLowerCase())))found.add(key)});if(hasProlongedFever(text,found))found.add("fever_prolonged");if(found.has("headache")&&found.has("vomiting"))found.add("headache_vomit");return found}
-
-function triage(text,quickKeys){
-const fromText=detectSymptoms(text);
-const fromQuick=new Set(quickKeys||[]);
-const f=new Set([...fromText,...fromQuick]);
-if(fromQuick.has("fever_general"))f.add("fever_prolonged");
-if(f.has("headache")&&f.has("vomiting"))f.add("headache_vomit");
-const has=k=>f.has(k),re=[];let level="green",concern=null;
-if(has("fever_prolonged")&&has("pallor")&&has("weight_loss")){level="red";concern="Possible leukemia";re.push("Fever lasting more than 2 weeks","Pallor (pale skin) reported","Weight loss reported")}
-else if(has("white_eye")){level="red";concern="Possible retinoblastoma";re.push("Abnormal white reflection in the eye/pupil")}
-else if(has("mass")){level="red";concern="Possible solid tumor";re.push("New lump, mass, or swelling reported");if(has("weight_loss"))re.push("Accompanied by weight loss")}
-else if(has("bleeding")){level="red";concern="Possible leukemia / clotting disorder";re.push("Unusual bleeding or bruising reported");if(has("pallor"))re.push("Accompanied by pallor")}
-else if(has("headache_vomit")){level="red";concern="Possible brain tumor";re.push("Persistent headache with vomiting / unsteady gait")}
-else if(has("bone_pain")&&(has("fever_general")||has("pallor")||has("mass"))){level="red";concern="Possible bone tumor or leukemia";re.push("Persistent bone pain reported","Combined with fever, pallor, or swelling")}
-else if(has("lymph_node")&&(has("fever_prolonged")||has("weight_loss"))){level="yellow";concern="Needs monitoring — possible infection or early lymphoma";re.push("Swollen gland/lymph node not resolving")}
-else if(has("bone_pain")||has("lymph_node")){level="yellow";concern="Monitor — recheck if it persists beyond 2 weeks";re.push("Symptom present but no other red-flag combination yet")}
-else if(has("fever_prolonged")||has("weight_loss")||has("fatigue")||has("pallor")){level="yellow";concern="Monitor closely, recheck in a few days";re.push("One warning sign present without a red-flag combination")}
-else re.push("No red-flag symptoms or combinations matched");
-return{level,concern,re}}
-
-function risk(level,t){const label=level==="red"?t.riskRed:level==="yellow"?t.riskYellow:t.riskGreen;return `<span class="risk ${level}"><span class="dot"></span>${label}</span>`}
-
-const DB_KEY="ashacare_case_db_v2";
-function cmLoad(){
-try{return JSON.parse(localStorage.getItem(DB_KEY))||{patients:[],cases:[],exams:[],followups:[],referrals:[],users:[]}}catch(e){return{patients:[],cases:[],exams:[],followups:[],referrals:[],users:[]}}
+function risk(level, t) {
+  const label = level === "red" ? t.riskRed : level === "yellow" ? t.riskYellow : t.riskGreen;
+  return `<span class="risk ${level}"><span class="dot"></span>${label}</span>`;
 }
-function cmSave(db){localStorage.setItem(DB_KEY,JSON.stringify(db));}
-function cmId(prefix){return prefix+"-"+Date.now().toString(36).toUpperCase()+"-"+Math.floor(100+Math.random()*900)}
-function cmStatusLabel(st){
-const L={
-en:{PENDING:"Pending doctor review",UNDER_REVIEW:"Under review",FOLLOW_UP:"Follow-up",REFERRED:"Referred",CLOSED:"Closed"},
-hi:{PENDING:"डॉक्टर की जांच लंबित",UNDER_REVIEW:"जांच में",FOLLOW_UP:"फॉलो-अप",REFERRED:"रेफर किया गया",CLOSED:"बंद"},
-or:{PENDING:"ଡାକ୍ତରୀ ଯାଞ୍ଚ ବାକି",UNDER_REVIEW:"ଯାଞ୍ଚ ଚାଲିଛି",FOLLOW_UP:"ଫଲୋ-ଅପ୍",REFERRED:"ରେଫର୍ କରାଯାଇଛି",CLOSED:"ବନ୍ଦ"} };
-return (L[App.state.lang]||L.en)[st]||st;
-}
-function cmStatusPill(st){let c={PENDING:"status-pending",UNDER_REVIEW:"status-review",FOLLOW_UP:"status-followup",REFERRED:"status-referred",CLOSED:"status-closed"}[st]||"status-closed";return `<span class="statusPill ${c}">● ${cmStatusLabel(st)}</span>`}
 
-const _cmBaseSavePatient=App.savePatientData;
-App.savePatientData=function(){
-const beforeCount=this.state.patients.length;
-_cmBaseSavePatient.call(this);
-if(this.state.patients.length>beforeCount){
-const p=this.state.patients[0];
-const db=cmLoad();
-db.patients=[p,...(db.patients||[]).filter(x=>x.id!==p.id)];
-cmSave(db);
-this.state.cmDb=db; this.state.patients=db.patients;
-}
-};
-
-const _cmOriginalHome=App.home;
-App.home=function(){
-if(this.state.userRole==="Medical Officer / Doctor") return this.doctorHome();
-const html=_cmOriginalHome.call(this);
-return html;
-};
-
-App.doctorHome=function(){
-const t=this.t(), db=cmLoad(), cases=db.cases||[];
-const pending=cases.filter(c=>c.status==="PENDING").length; const review=cases.filter(c=>c.status==="UNDER_REVIEW").length;
-const follow=cases.filter(c=>c.status==="FOLLOW_UP").length;
-const referred=cases.filter(c=>c.status==="REFERRED").length;
-const recent=cases.filter(c=>["PENDING","UNDER_REVIEW","FOLLOW_UP"].includes(c.status)).slice().sort((a,b)=>new Date(b.when||b.createdAt)-new Date(a.when||a.createdAt));
-return `<div class="doctorHero"><div style="font-size:11px;opacity:.85">MEDICAL OFFICER / DOCTOR</div><h2>Doctor Dashboard</h2><div style="font-size:13px;opacity:.92">Welcome, ${this.escape(this.state.userName)}</div></div>
-<div class="metricGrid"><div class="metricCard"><strong>${pending}</strong><span>Pending</span></div><div class="metricCard"><strong>${review}</strong><span>In review</span></div><div class="metricCard"><strong>${follow}</strong><span>Follow-ups</span></div><div class="metricCard"><strong>${referred}</strong><span>Referred</span></div></div>
-<div class="sectionTitle">Cases needing attention</div>
-${recent.length?recent.map(c=>`<button class="card record" onclick="App.openDoctorCase('${c.id}')"><div style="min-width:0;text-align:left"><div class="recordName">${this.escape(c.name||"Unnamed patient")}</div><div class="muted">${c.id} · ${this.escape(c.registeredBy||"ASHA")}</div><div style="margin-top:7px">${cmStatusPill(c.status)} ${risk(c.level||"green",t)}</div></div><span style="font-size:20px">›</span></button>`).join(""):`<div class="card box muted">No pending cases right now.</div>`}
-<button class="outline" onclick="App.go('records')">View all case records</button>`;
-};
-
-App.openDoctorCase=function(id){if(this.state.userRole!=="Medical Officer / Doctor"){this.toast("Only a doctor can examine cases");return;}this.state.selectedRecordId=id;this.state.screen="doctorCase";this.render()};
-
-App.doctorCase=function(){
-if(this.state.userRole!=="Medical Officer / Doctor"){this.state.screen="home";this.toast("Doctor access required");return "";}
-const db=cmLoad(),c=db.cases.find(x=>x.id===this.state.selectedRecordId),t=this.t();
-if(!c)return `<button class="back" onclick="App.go('home')">← ${t.back}</button><div class="card box muted">Case not found.</div>`;
-const ex=db.exams.find(x=>x.caseId===c.id),fu=db.followups.find(x=>x.caseId===c.id),rf=db.referrals.find(x=>x.caseId===c.id);
-return `<button class="back" onclick="App.go('home')">← ${t.back}</button>
-<div class="card refCard"><div class="refHead"><div><div class="muted">Case ID</div><strong>${this.escape(c.id)}</strong></div>${risk(c.level||"green",t)}</div>
-<div class="refBody"><h3 style="margin:0 0 8px">${this.escape(c.name||"Unnamed patient")}</h3><div class="caseMeta"><div><small>Age</small><b>${this.escape(c.age||"—")}</b></div><div><small>Status</small>${cmStatusPill(c.status)}</div><div><small>Registered by</small><b>${this.escape(c.registeredBy||"—")}</b></div><div><small>Created</small><b>${new Date(c.when||c.createdAt).toLocaleDateString()}</b></div></div>
-<div class="examBox"><b>Symptoms recorded</b><div class="transcriptBox" style="margin-top:7px">${this.escape(c.transcript||"—")}</div></div>
-${c.concern?`<div class="examBox"><b>Screening concern</b><div style="margin-top:5px">${this.escape(c.concern)}</div></div>`:""}
-${ex?`<div class="examBox"><b>Doctor examination</b><div class="muted" style="margin-top:6px">Findings: ${this.escape(ex.findings||"—")}</div><div class="muted">Diagnosis / impression: ${this.escape(ex.diagnosis||"—")}</div><div class="muted">Notes: ${this.escape(ex.notes||"—")}</div></div>`:""}
-${fu?`<div class="examBox" style="background:#ecfdf5"><b>Follow-up</b><div>Return: ${new Date(fu.date).toLocaleDateString()}</div><div class="muted">${this.escape(fu.instructions||"")}</div></div>`:""}
-${rf?`<div class="examBox" style="background:#fef2f2"><b>Referral</b><div>${this.escape(rf.hospital||"Hospital")}</div><div class="muted">${this.escape(rf.reason||"")}</div></div>`:""}
-</div></div>
-${this.state.userRole==="Medical Officer / Doctor"&&c.status!=="CLOSED"?`<div class="card box"><h3 style="margin:0 0 8px">Doctor action</h3><label class="label">Clinical findings</label><textarea id="docFindings" class="textarea" rows="2" placeholder="What did you find on examination?"></textarea><label class="label">Diagnosis / impression</label><textarea id="docDiagnosis" class="textarea" rows="2" placeholder="Doctor's clinical impression"></textarea><label class="label">Doctor notes / advice</label><textarea id="docNotes" class="textarea" rows="2" placeholder="Treatment, advice, instructions"></textarea>
-<div class="caseActions"><button class="successBtn" onclick="App.closeCase()">✓ Close case</button><button class="blueBtn" onclick="App.setDoctorFollowup()">↻ Follow-up in 3 days</button><button class="dangerBtn" onclick="App.referCase()">↗ Refer to hospital</button></div></div>`:`<div class="card box" style="background:#f1f5f9">✓ This case is closed.</div>`}`;
-};
-
-function cmDoctorFields(){return {findings:document.getElementById("docFindings")?.value.trim()||"",diagnosis:document.getElementById("docDiagnosis")?.value.trim()||"",notes:document.getElementById("docNotes")?.value.trim()||""}}
-function cmSaveExam(caseId){const db=cmLoad(),f=cmDoctorFields();db.exams=db.exams.filter(x=>x.caseId!==caseId);db.exams.push({id:cmId("EX"),caseId,doctorId:App.state.workerId,...f,createdAt:new Date().toISOString()});return db}
-
-App.closeCase=function(){if(this.state.userRole!=="Medical Officer / Doctor"){this.toast("Only a doctor can close a case");return;}const db=cmSaveExam(this.state.selectedRecordId),c=db.cases.find(x=>x.id===this.state.selectedRecordId);if(!c)return;c.status="CLOSED";c.closedAt=new Date().toISOString();c.closedBy=this.state.workerId;cmSave(db);this.state.records=db.cases;this.state.screen="doctorCase";this.render();this.toast("Case closed successfully")};
-
-App.setDoctorFollowup=function(){if(this.state.userRole!=="Medical Officer / Doctor"){this.toast("Only a doctor can set follow-up");return;}const db=cmSaveExam(this.state.selectedRecordId),c=db.cases.find(x=>x.id===this.state.selectedRecordId);if(!c)return;const date=new Date();date.setDate(date.getDate()+3);db.followups=db.followups.filter(x=>x.caseId!==c.id);db.followups.push({id:cmId("FU"),caseId:c.id,doctorId:this.state.workerId,date:date.toISOString(),instructions:cmDoctorFields().notes||"Return for review after 3 days",status:"PENDING"});c.status="FOLLOW_UP";c.followupDate=date.toISOString();cmSave(db);this.state.records=db.cases;this.render();this.toast("Follow-up set for 3 days")};
-
-App.referCase=function(){if(this.state.userRole!=="Medical Officer / Doctor"){this.toast("Only a doctor can refer a case");return;}const db=cmSaveExam(this.state.selectedRecordId),c=db.cases.find(x=>x.id===this.state.selectedRecordId);if(!c)return;const f=cmDoctorFields();const hospital=prompt("Hospital / facility name","District Hospital");if(hospital===null)return;const reason=prompt("Reason for referral",f.diagnosis||c.concern||"Further evaluation required");if(reason===null)return;db.referrals=db.referrals.filter(x=>x.caseId!==c.id);db.referrals.push({id:cmId("RF"),caseId:c.id,doctorId:this.state.workerId,hospital,reason,urgency:c.level==="red"?"Urgent":"Routine",notes:f.notes,createdAt:new Date().toISOString()});c.status="REFERRED";c.referredHospital=hospital;cmSave(db);this.state.records=db.cases;this.render();this.toast("Referral recorded")};
-
-App.records=function(){
-const t=this.t(),recs=cmLoad().cases||[];
-return `<div class="sectionTitle">Case Records</div><div class="muted" style="margin:-4px 0 10px">${recs.length} total cases</div>${recs.length?recs.map(r=>`<button class="card record" onclick="App.openRecord('${r.id}')"><div style="text-align:left"><div class="recordName">${this.escape(r.name||"Unnamed patient")}${r.age?", "+this.escape(r.age):""}</div><div class="muted">${r.id} · ${this.escape(r.registeredBy||"—")}</div><div style="margin-top:6px">${cmStatusPill(r.status||"PENDING")}</div></div>${risk(r.level||"green",t)}</button>`).join(""):`<div class="card box muted">No cases yet.</div>`}<button class="primary" onclick="App.newAssessment()">＋ ${t.newAssessment}</button>`;
-};
-
-App.recordDetail=function(){
-const t=this.t(),db=cmLoad(),rec=db.cases.find(r=>r.id===this.state.selectedRecordId);
-if(!rec)return `<button class="back" onclick="App.go('records')">← ${t.back}</button><div class="card box muted">Case not found.</div>`;
-const ex=db.exams.find(x=>x.caseId===rec.id),fu=db.followups.find(x=>x.caseId===rec.id),rf=db.referrals.find(x=>x.caseId===rec.id); return `<button class="back" onclick="App.go('records')">← ${t.back}</button><div class="card refHead"><div><div class="muted">${t.caseId}</div><strong>${this.escape(rec.id)}</strong></div>${risk(rec.level||"green",t)}</div><div class="card box"><h3 style="margin:0 0 10px">${this.escape(rec.name||"Unnamed patient")}</h3>${cmStatusPill(rec.status||"PENDING")}<div class="caseMeta" style="margin-top:10px"><div><small>Registered by</small><b>${this.escape(rec.registeredBy||"—")}</b></div><div><small>Created</small><b>${new Date(rec.when||rec.createdAt).toLocaleDateString()}</b></div></div></div>${rec.concern?`<div class="card box"><div class="boxTitle">${t.possible}</div><p style="margin:0">${this.escape(rec.concern)}</p></div>`:""}<div class="card box"><div class="boxTitle">${t.symptomsRecorded}</div><div class="transcriptBox">${this.escape(rec.transcript||"—")}</div></div>${ex?`<div class="card box"><div class="boxTitle">Doctor examination</div><p>Findings: ${this.escape(ex.findings||"—")}</p><p>Diagnosis: ${this.escape(ex.diagnosis||"—")}</p><p>Notes: ${this.escape(ex.notes||"—")}</p></div>`:""}${fu?`<div class="card box" style="background:#ecfdf5"><b>Follow-up: ${new Date(fu.date).toLocaleDateString()}</b><p>${this.escape(fu.instructions||"")}</p></div>`:""}${rf?`<div class="card box" style="background:#fef2f2"><b>Referred to: ${this.escape(rf.hospital||"")}</b><p>${this.escape(rf.reason||"")}</p></div>`:""}`;
-};
-
-const _cmOriginalRender=App.render;
-App.render=function(){
-if(this.state.screen==="doctorCase"){
-document.getElementById("screen").innerHTML=this.doctorCase();
-document.querySelectorAll(".nav").forEach(x=>x.classList.remove("active"));
-return;
-}
-const out=_cmOriginalRender.call(this);
-return out;
-};
-
-// Initial App Boot
+// Boot App
+if(App.state.isAuthenticated) App.sync();
 App.render();
 </script>
 </body>
